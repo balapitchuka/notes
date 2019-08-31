@@ -1,5 +1,5 @@
 # Table of Contents
-1. [Pythonic Thinking](#Pythonic Thinking)
+1. [Pythonic Thinking](#Pythonic-Thinking)
 2. [Example2](#example2)
 3. [Third Example](#third-example)
 4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
@@ -14,7 +14,7 @@
 
 
 
-## Pythonic Thinking
+## Pythonic-Thinking
 
 item1 : know which version of python you're using:
 ```
