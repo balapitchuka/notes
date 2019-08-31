@@ -80,4 +80,42 @@
 
 7.  
 ```
+#### Item6: Avoid using start, end, and stride in a single slice
 
+#### Item7: Use List comprehensions instead of map and filter.
+
+
+#### Item8: Avoid more than two expressions in  list comprehensions.
+
+#### Item9: Consider Generator expressions for large comprehensions.
+
+#### Item10: Prefer enumerate over range
+```
+colors = ['red', 'black', 'orange', 'yellow']
+for colr in colors:
+    print(colr)
+
+for colr_i in range(len(colors)):
+    print("%d: %s"%(colr_i, colors[colr_i])
+    
+for index, colr in enumerate(colors):
+    print("%d: %s"%(colr_i, colors[colr_i])
+    
+# we can also add number from which enumerate should begin counting from 
+   
+for index, colr in enumerate(colors, 2):
+    print("%d: %s"%(colr_i, colors[colr_i])
+```
+
+#### Item11: Use zip to process Iterators in parallel
+
+
+
+#### Item12: Avoid else blocks after for and while loops
+```
+
+```
+
+#### Item13: Take advantage of each block in try/except/else/finally
+
+# Functions
