@@ -31,6 +31,15 @@ item5: Know How to Slice Sequences:
                assert a[:5] == a[0:5]
                assert a[5:] == a[5:len(a)]
                
+3. slicing deals properly with start and end indexes that are beyond the boundaries of list.
+
+      eg:
+                a = ['a', 'b', 'c', 'd' ,'e', 'f' , 'g' ]
+                first_twenty_items = a[:20]    # this will not throw error
+                last_twenty_items = a[-20:]    # this also will not throw error
+                
+                but a[20] will throw 'IndeError'
+               
      
 ```
 
