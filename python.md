@@ -40,6 +40,28 @@ item5: Know How to Slice Sequences:
                 
                 but a[20] will throw 'IndeError'
                
-     
+               
+4. The result of list slicing is a whole new list. Modifying the result of slicing won't affect the original list. References to the objects from the original list are maintained.
+      eg:
+            b = a[4:]
+            print("before: ", b)
+            b[1] = 99
+            print("after: ", b)
+            print("no change in a: ", a)
+            
+5. when used in assignments, slices will replace the specified range in the original list.
+
+     eg:
+          print("before ", a)
+          a[2:7] = [99, 34, 33]      # this is ok unlike tuple assignments x, y = c[:2]
+          print("after ", a)
+
+6. if you leave out both start and end index when slicing, we get a copy of original list.
+   
+       eg: 
+           b = a[:]
+           assert b == a and b is not a
+
+7.  
 ```
 
