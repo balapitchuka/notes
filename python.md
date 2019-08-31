@@ -16,7 +16,7 @@
 
 ## Pythonic-Thinking
 
-item1 : know which version of python you're using:
+#### Item1 : Know the version of python you're using:
 ```
       python --version
       python3 --version 
@@ -28,16 +28,16 @@ item1 : know which version of python you're using:
           
 ```
 
-item2 : Follow the PEP8 style guide:
+#### Item2 : Follow the PEP8 style guide:
  
  
-item3 : Know the difference between 'bytes', 'str', and 'unicode' :
+#### Item3 : Know the difference between 'bytes', 'str', and 'unicode' :
 
 
-item4: Write Helper Functions Instead of Complex Expressions:
+#### Item4: Write Helper Functions Instead of Complex Expressions:
 
 
-item5: Know How to Slice Sequences:
+#### Item5: Know How to Slice Sequences:
 ```
 1. slicing syntax :  somelist[start:end]
 2. avoid using start of list, end of list to reduce visual noise.
@@ -56,7 +56,8 @@ item5: Know How to Slice Sequences:
                 but a[20] will throw 'IndeError'
                
                
-4. The result of list slicing is a whole new list. Modifying the result of slicing won't affect the original list. References to the objects from the original list are maintained.
+4. The result of list slicing is a whole new list. Modifying the result of slicing won't affect the 
+    original list. References to the objects from the original list are maintained.
       eg:
             b = a[4:]
             print("before: ", b)
