@@ -1,5 +1,5 @@
-## constructors:
-```
+## Constructors:
+
 1.Every class has a constructor whether it’s a **normal class** or an **abstract class**.
 
 2.Like constructors method can also have name same as class name, but still they have 
@@ -23,4 +23,4 @@
   
 9.If Super class doesn’t have a no-arg(default) constructor then compiler would not insert a default constructor
   in child class as it does in normal scenario.
-```
+
