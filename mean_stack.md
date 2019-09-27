@@ -1,3 +1,4 @@
+Reference taken from codevolution mean stack tutorial
 Video player application:
 1. Angular CLI
 2. Express server.
