@@ -6,3 +6,13 @@ Video player application:
 5. rest api
 6. test with postman
 7. angular concepts.
+
+
+### MEAN Stack:
+free open source stack to build web apps
+```
+MongoDB - NoSQL Database
+Express - Web Framework that runs on node.
+Angular - Client side development platform
+Node - Execution Environment.
+```
