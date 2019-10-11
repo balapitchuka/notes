@@ -1,6 +1,6 @@
 # Table Of Contents
-1. [ constructors. ](#constructors)
-2. [ maven. ](#maven)
+1. [ Constructors. ](#constructors)
+2. [ Maven. ](#maven)
 
 
 
@@ -32,15 +32,24 @@
   in child class as it does in normal scenario.
 
 <a name="maven"></a>
-## maven
+## Maven
 
 ### Project Coordinates
 1. Project Coordinates uniquely identify a project.
 2. Similar to GPS coordinates for your house:  latitude/longitude.
 3. Similar to Precise information for finding your house (city , street, house #)
 ```
-example anology
+Example Anology:
+
 <groupId>com.bala.reservations</groupId>   -- city
 <artifactId>reservations</artifactId>      -- street
 <version>0.0.1-SNAPSHOT</version>          -- house number
+
+In general, the usage is as follows:
+
+Groupd ID    -- Name of company, group or organisation(convention to use reverse domain name as com.luv2code)
+Artifact ID  -- Name of project 
+Version      -- A specific release version like : 1.0, 1.6, 2.0
+                If project is under active developement then : 1.0-SNAPSHOT
+
 ```
