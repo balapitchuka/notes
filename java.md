@@ -33,3 +33,14 @@
 
 <a name="maven"></a>
 ## maven
+
+### Project Coordinates
+1. Project Coordinates uniquely identify a project.
+2. Similar to GPS coordinates for your house:  latitude/longitude.
+3. Similar to Precise information for finding your house (city , street, house #)
+```
+example anology
+<groupId>com.bala.reservations</groupId>   -- city
+<artifactId>reservations</artifactId>      -- street
+<version>0.0.1-SNAPSHOT</version>          -- house number
+```
