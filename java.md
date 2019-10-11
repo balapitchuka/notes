@@ -39,7 +39,7 @@
 2. Similar to GPS coordinates for your house:  latitude/longitude.
 3. Similar to Precise information for finding your house (city , street, house #)
 ```
-Example Anology:
+Example Analogy:
 
 <groupId>com.bala.reservations</groupId>   -- city
 <artifactId>reservations</artifactId>      -- street
