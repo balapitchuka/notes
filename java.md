@@ -53,3 +53,4 @@ Version      -- A specific release version like : 1.0, 1.6, 2.0
                 If project is under active developement then : 1.0-SNAPSHOT
 
 ```
+#### Note: Sometimes project coordinates are referred as GAV(GroupID, ArtifactID, Version)
