@@ -33,6 +33,8 @@
 
 <a name="maven"></a>
 ## Maven
+-- dependency management
+-- build tool
 
 ### Project Coordinates
 1. Project Coordinates uniquely identify a project.
