@@ -81,5 +81,5 @@ const sayHi = (name) => (
 )
 ```
 ##### Notes:
--Block body ➡️ return keyword is required
--Concise body ➡️ return keyword is implied and not needed 
+- Block body ➡️ return keyword is required
+- Concise body ➡️ return keyword is implied and not needed 
