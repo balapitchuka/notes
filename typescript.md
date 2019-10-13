@@ -5,7 +5,7 @@
 
 
 <a name="null_undefined"></a>
-## Null and Undefined:
+### Null and Undefined:
 They are intended to mean different things:
-* Something hasn't been initialized : undefined.
-* Something is currently unavailable: null.
+* Something hasn't been initialized : **undefined** .
+* Something is currently unavailable: **null** .
