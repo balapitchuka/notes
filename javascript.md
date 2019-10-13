@@ -1,7 +1,7 @@
 # Table Of Contents
 
 1. [HTTP Request in Javascript ](#ajax)
-2. [ES6 Arrow Functions](#es6arrow]
+2. [ES6 Arrow Functions ](#es6arrow]
 
 
 
