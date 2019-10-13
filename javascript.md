@@ -26,20 +26,26 @@
 
 <a name="es6arrow"></a>
 ## ES6 Arrow Functions:
-many ways to write arrow functions are:
+Many ways to write arrow functions are:
 ```
 // Explicit Return, Multi-Line
 a => {
   return a
 }
+
+
 // Explicit Return, Single-Line
 a => { return a }
+
+
 // Implicit Return, Multi-line
 a => (
   a
 )
+
 // Implicit Return, Single-Line
 a => a
+
 // Multiple Parameters, Parentheses Required
 (a, b) => a, b
 ```
