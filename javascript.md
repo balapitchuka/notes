@@ -1,6 +1,7 @@
 # Table Of Contents
 
 1. [HTTP Request in Javascript ](#ajax)
+2. [ES6 Arrow Functions](#es6arrow]
 
 
 
@@ -21,5 +22,26 @@
   7.  **Request** - A Simplified HTTP Client.
       The Request library is one of the simplest ways to make HTTP calls. 
       The structure and   syntax are very similar to that of  how requests are handled in Node.js
+
+
+<a name="es6arrow"></a>
+## ES6 Arrow Functions:
+many ways to write arrow functions are:
+```
+// Explicit Return, Multi-Line
+a => {
+  return a
+}
+// Explicit Return, Single-Line
+a => { return a }
+// Implicit Return, Multi-line
+a => (
+  a
+)
+// Implicit Return, Single-Line
+a => a
+// Multiple Parameters, Parentheses Required
+(a, b) => a, b
+```
   
  
