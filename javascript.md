@@ -24,6 +24,8 @@
       The structure and   syntax are very similar to that of  how requests are handled in Node.js
 
 
+
+
 <a name="es6arrow"></a>
 ## ES6 Arrow Functions:
 Many ways to write arrow functions are:
@@ -49,5 +51,35 @@ a => a
 // Multiple Parameters, Parentheses Required
 (a, b) => a, b
 ```
-  
- 
+#### Implicit vs Explicit Return:
+1. When you use the return keyword --  **explicit return** . 
+2. arrow functions allow something called **implied return** where the return keyword can be skipped.
+###### Example A: Normal Function
+```
+const sayHi = function(name) {
+  return name
+}
+```
+##### Example B: Arrow Function with Explicit Return
+```
+// Multi-line
+const sayHi = (name) => {
+  return name
+}
+
+// Single-line
+const sayHi = (name) => { return name }
+```
+##### Example C: Arrow Function with Implicit Return
+```
+// Single-line
+const sayHi = (name) => name
+
+// Multi-line
+const sayHi = (name) => (
+  name
+)
+```
+##### Notes:
+-Block body ➡️ return keyword is required
+-Concise body ➡️ return keyword is implied and not needed 
