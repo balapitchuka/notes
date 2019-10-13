@@ -81,5 +81,19 @@ const sayHi = (name) => (
 )
 ```
 ##### Notes:
-- Block body ➡️ return keyword is required
+- Block body ➡️ return keyword is required  ( block body is where curly braces{} are used).
 - Concise body ➡️ return keyword is implied and not needed 
+- Parentheses are optional for a SINGLE parameter (here parentheses implies ())
+
+##### Example
+```
+const me = () => { name: "samantha" };
+me(); // undefined 
+
+Note : For a concise body, wrap object literal in parentheses
+
+const me = () => ({ name: "samantha" });
+me(); // { name: "samantha" } ✅
+```
+
+
