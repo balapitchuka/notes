@@ -1,5 +1,6 @@
 # Redux
-redux core concepts:
+Redux is a specification
+Redux core concepts:
 1. Store
 2. Action
 3. Reducer
