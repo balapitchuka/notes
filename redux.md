@@ -1,3 +1,5 @@
+# Redux
+
 ### Action:
  Actions describes what happened but they donot describe how the application state changes. Reducers take care of state changes
  in according to an action.
