@@ -6,9 +6,9 @@
    - Each message within a partition gets an incremental id, called offset.
    
  Reallife Example:  **truck_gps***
- `Say you have a fleet of trucks, each truck reports itf GPS to kafka.
-  We can here have a kafka topic trucks_gps, that contains the position of all the trucks.
+ > Say you have a fleet of trucks, each truck reports itf GPS to kafka.
+   We can here have a kafka topic trucks_gps, that contains the position of all the trucks.
   Each truck will send a message say every 20 seconds indicating its position. Each message will contain the truckid and truck position(latitude and longitude)
-`
+
  
    
