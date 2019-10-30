@@ -1,6 +1,6 @@
 # Table Of Contents
 1. [ Null and Undefined. ](#null_undefined)
-2. [  ](#maven)
+2. [Type annotation and Type inference ](#annotation_inference)
 
 
 
@@ -19,4 +19,11 @@ console.log(0 == undefined); // false
 console.log('' == undefined); // false
 console.log(false == undefined); // false
 
+```
+
+<a name="annotation_inference"></a>
+### Type annotation and Type inference:
+```
+  Type annotation : We(developers) tell typescript the type.
+  Type inference  : Typescript guesses the type. 
 ```
