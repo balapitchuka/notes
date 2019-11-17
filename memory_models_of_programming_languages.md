@@ -4,5 +4,5 @@
 
 
 ## Java
-1. **Instance methods : In Java, we do not have separate copies for instance methods. The way this is done is by passing an implied reference to this.
+1. **Instance methods** : In Java, we do not have separate copies for instance methods. The way this is done is by passing an implied reference to this.
 
