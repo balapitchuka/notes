@@ -56,3 +56,11 @@ Version      -- A specific release version like : 1.0, 1.6, 2.0
 
 ```
 #### Note: Sometimes project coordinates are referred as GAV(GroupID, ArtifactID, Version)
+
+
+## Variable Types:
+```
+Local variables
+Instance variables
+Class/Static variables
+```
