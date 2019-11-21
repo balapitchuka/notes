@@ -59,8 +59,19 @@ Version      -- A specific release version like : 1.0, 1.6, 2.0
 
 
 ## Variable Types:
-```
-Local variables
-Instance variables
-Class/Static variables
-```
+1. Local variables:
+- Local variables are declared in methods, constructors, or blocks.
+- Access modifiers cannot be used for local variables.
+- Local variables are visible only within the declared method, constructor, or block.
+- Local variables are implemented at stack level internally.
+- There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
+
+2. Instance variables:
+- Instance variables are declared in a class, but **outside a method, constructor or any block**.
+- Instance variables have default values. 
+    - For numbers -> 0, for Booleans ->  false, and for object references -> null
+3. Class/Static variables:
+- **Class variables** also known as **static variables** are declared with the static keyword in a class, but **outside** a method, constructor or a block.
+- **Static variables** are stored in the static memory. It is rare to use **static variables** other than declared final and used as either public or private constants.
+- Static variables are rarely used other than being declared as constants. Constants are variables that are declared as **public/private, final, and static**. Constant variables never change from their initial value.
+
