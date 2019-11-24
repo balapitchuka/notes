@@ -12,3 +12,13 @@
 ## Javascript
 0. Implicit memory management.
 1.
+
+
+## python
+
+
+
+
+## go
+
+
