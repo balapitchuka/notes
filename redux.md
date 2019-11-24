@@ -1,9 +1,9 @@
 # Redux
-Redux is a specification
-Redux core concepts:
-1. Store
-2. Action
-3. Reducer
+- Redux is a specification
+- Redux core concepts:
+  1. **Store**
+  2. **Action**
+  3. **Reducer**
 ```
 Analogy with shop example:
 1. Store -- shop  (holds the state of application)

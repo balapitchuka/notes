@@ -4,10 +4,6 @@
 2. 
 
 
-
-
-
-
 <a name="compare"></a>
 ### Mapping relational database to nosql database:
 - **Collections**  ==  tables in RDBMS.
