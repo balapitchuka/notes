@@ -17,6 +17,11 @@ What are javascript loading methods?
 -->
 <img src="static/js-loading-methods.png" width="500">
 <a name="ajax"></a>
+Figure : javascript loading methods 
+
+***
+
+
 ## HTTP Request in Javascript
    Making HTTP calls from the client-side wasn’t that easy a decade ago. A front-end developer would have to rely on XMLHttpRequest  which was hard to use and implement. The modern libraries and HTTP clients make the front-end features like user interactions, animations, asynchronous file uploads, etc., easier. 
   
@@ -32,7 +37,7 @@ What are javascript loading methods?
       The structure and   syntax are very similar to that of  how requests are handled in Node.js
 
 
-
+***
 
 <a name="es6arrow"></a>
 ## ES6 Arrow Functions:
