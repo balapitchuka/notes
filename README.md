@@ -1,13 +1,13 @@
-# Concepts
+# This Repo contains various concepts relating to computer programming, webdevelopment etc.
 
 
 # Table of contents:
 
 **Programming Languages**
   - [Java](java.md)
-[Some paragraph](#paragraph1)
-[Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
+  [Some paragraph](#paragraph1)
+  [Sub paragraph](#subparagraph1)
+  3. [Another paragraph](#paragraph2)
 
 ## This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
