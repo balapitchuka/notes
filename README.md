@@ -2,9 +2,11 @@
 
 
 # Table of contents:
-1.[ Introduction ](java.md)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
+
+**Programming Languages**
+  - [Java](java.md)
+[Some paragraph](#paragraph1)
+[Sub paragraph](#subparagraph1)
 3. [Another paragraph](#paragraph2)
 
 ## This is the introduction <a name="introduction"></a>
