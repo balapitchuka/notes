@@ -1,12 +1,18 @@
-# Table Of Contents
+# Javascript Concepts
 
-1. [HTTP Request in Javascript ](#ajax)
-2. [ES6 Arrow Functions ](#es6arrow)
+## Table Of Contents
+- [Javascript Basics](#js-basics)
+- [HTTP Request in Javascript ](#ajax)
+- [ES6 Arrow Functions ](#es6arrow)
 
 
 
 
 
+## Javascript basics<a name="js-basics"></a>
+
+What are javascript loading methods?
+![Javascript loading methods](static/js-loading-methods.png)
 
 <a name="ajax"></a>
 ## HTTP Request in Javascript
