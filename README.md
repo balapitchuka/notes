@@ -7,10 +7,12 @@
 **Programming Languages**
   - [Java](java.md)
   - [Python](python.md)
-  - [Javascript](javascript.md)
-  - [](#paragraph2)
+  - [C++](c++.md)
   
-  **Web Development**
+**Web Development**
+  - [HTML](html.md)
+  - [CSS](css.md)
+  - [Javascript](javascript.md)
 
 ## This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
