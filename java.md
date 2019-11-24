@@ -1,7 +1,7 @@
 # Table Of Contents
-[ Variable Types(local, instance, static) ](#variabletypes)
-[ Constructors ](#constructors)
-[ Maven ](#maven)
+- [ Variable Types(local, instance, static) ](#variabletypes)
+- [ Constructors ](#constructors)
+- [ Maven ](#maven)
 
 
 <a name="variabletypes"></a>
