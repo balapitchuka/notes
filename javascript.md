@@ -23,7 +23,7 @@ Figure : javascript loading methods
 
 
 
-#####Basics javascript language rules and best practices:
+##### Basics javascript language rules and best practices:
 
 - Javascript is **case sensitive**.
 - Use **camelCase** while writing code.
@@ -36,11 +36,11 @@ Figure : javascript loading methods
 - **Constants** names are all **capital letters**
 - End each statement with a semicolon(not neccessary but a good practice)
 
-
-> **Hoisting** : It is Javascript default behaviour of moving declarations to the top
+`
+> **Hoisting** : It is Javascript default behaviour of moving declarations to the top.
 Example : var x;
 **Note** : Initializations are not hoisted. Example var x = 5;
-
+`
 
 
 
