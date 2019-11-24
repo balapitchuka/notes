@@ -3,7 +3,8 @@
 ## Table Of Contents
 - [Javascript Basics](#js-basics)
 - [HTTP Request in Javascript ](#ajax)
-- [ES6 Arrow Functions ](#es6arrow)
+- [ES6](#es6)
+  - [ES6 Arrow Functions ](#es6arrow)
 
 
 
@@ -12,6 +13,7 @@
 ## Javascript basics<a name="js-basics"></a>
 
 What are javascript loading methods?
+
 <!--  commented image height not possible here
 ![Javascript loading methods](static/js-loading-methods.png)
 -->
@@ -19,7 +21,33 @@ What are javascript loading methods?
 <a name="ajax"></a>
 Figure : javascript loading methods 
 
+
+
+#####Basics javascript language rules and best practices:
+
+- Javascript is **case sensitive**.
+- Use **camelCase** while writing code.
+  - `getElementByTagName();`
+  - `var getDuck;`
+  - `var aliceTheCamelHasFiveHumps;`
+
+- **Variable names** start with **lowercase letters**
+- **Objects and classes names** start with **uppercase letters**
+- **Constants** names are all **capital letters**
+- End each statement with a semicolon(not neccessary but a good practice)
+
+
+> **Hoisting** : It is Javascript default behaviour of moving declarations to the top
+Example : var x;
+**Note** : Initializations are not hoisted. Example var x = 5;
+
+
+
+
+
+
 ***
+
 
 
 ## HTTP Request in Javascript
@@ -38,9 +66,9 @@ Figure : javascript loading methods
 
 
 ***
+# ES6<a name="es6"></a>
 
-<a name="es6arrow"></a>
-## ES6 Arrow Functions:
+## ES6 Arrow Functions:<a name="es6arrow"></a>
 Many ways to write arrow functions are:
 ```
 // Explicit Return, Multi-Line
