@@ -2,7 +2,7 @@
 > This Repo contains various concepts relating to computer programming, webdevelopment etc.
 
 
-# Table of contents:
+## Table of contents:
 
 **Programming Languages**
   - [Java](java.md)
