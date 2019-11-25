@@ -1,18 +1,29 @@
-# Javascript Concepts
+# Javascript Comprehensive Concepts
 
+Contents
+--------
+**&nbsp;&nbsp;&nbsp;**  **1. Basic Javascript :** **&nbsp;** **[`JS loading methods`](#js_loading_methods)**
+
+**&nbsp;&nbsp;&nbsp;**  **2. Ajax Requests :** **&nbsp;** **[`HTTP Calls in JS`](#ajax)**
+
+
+**&nbsp;&nbsp;&nbsp;** **3. ES6  :** **&nbsp;** **&nbsp;** **&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;****&nbsp;&nbsp;** **[`ES6 Arrow Functions`](#es6_arrow_functions)**
+
+
+<!-- 
 ## Table Of Contents
 - [Javascript Basics](#js-basics)
 - [HTTP Request in Javascript ](#ajax)
 - [ES6](#es6)
-  - [ES6 Arrow Functions ](#es6arrow)
+  - [ES6 Arrow Functions ](#es6_arrow_functions)
+-->
 
 
 
 
-
-## Javascript basics<a name="js-basics"></a>
-
-### What are javascript loading methods?
+Javascript basics<a name="js_basics"></a>
+--------
+#### What are javascript loading methods?<a name="js_loading_methods"></a>
 
 <!--  commented image height not possible here
 ![Javascript loading methods](static/js-loading-methods.png)
@@ -67,7 +78,7 @@ Figure : javascript loading methods
 ***
 # ES6<a name="es6"></a>
 
-## ES6 Arrow Functions:<a name="es6arrow"></a>
+## ES6 Arrow Functions:<a name="#es6_arrow_functions"></a>
 Many ways to write arrow functions are:
 ```
 // Explicit Return, Multi-Line
