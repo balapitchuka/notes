@@ -17,7 +17,7 @@
 <!--  commented image height not possible here
 ![Javascript loading methods](static/js-loading-methods.png)
 -->
-<img src="static/js-loading-methods.png" width="500">
+<img src="static/javascript/js-loading-methods.png" width="500">
 <a name="ajax"></a>
 Figure : javascript loading methods 
 
