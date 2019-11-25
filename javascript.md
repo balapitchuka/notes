@@ -78,7 +78,7 @@ Figure : javascript loading methods
 ***
 # ES6<a name="es6"></a>
 
-## ES6 Arrow Functions:<a name="#es6_arrow_functions"></a>
+## ES6 Arrow Functions:<a name="es6_arrow_functions"></a>
 Many ways to write arrow functions are:
 ```
 // Explicit Return, Multi-Line
