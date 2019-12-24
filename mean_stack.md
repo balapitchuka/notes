@@ -24,4 +24,6 @@ Angular - Client side development platform
 Node - (Javascript) Execution Environment.
 ```
 
+### MEAN Stack Architecture
+<img src="static/mean_stack_architecture.jpg" width=500>
 
