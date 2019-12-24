@@ -1,3 +1,5 @@
+
+
 Reference taken from codevolution mean stack tutorial
 Video player application:
 1. Angular CLI
@@ -10,10 +12,16 @@ Video player application:
 
 
 ### MEAN Stack:
-free open source stack to build web apps
+- The MEAN stack is comprised of four technologies: MongoDB, Express.js, Angular.js, and Node.js,
+- free open source stack to build web apps
+- is one of the best tools available for solving contemporary business challenges.
+- This technology results in low maintenance costs, fewer resources being required, and entails less development time.
+- It provides flexibility, high scalability, and several features that help businesses deliver high-performance solutions.
 ```
 MongoDB - NoSQL Database
 Express - Web Framework that runs on node.
 Angular - Client side development platform
-Node - Execution Environment.
+Node - (Javascript) Execution Environment.
 ```
+
+
