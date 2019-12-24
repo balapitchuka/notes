@@ -10,7 +10,7 @@ Video player application:
 6. test with postman
 7. angular concepts.
 
-
+------
 ### MEAN Stack:
 - The MEAN stack is comprised of four technologies: MongoDB, Express.js, Angular.js, and Node.js,
 - free open source stack to build web apps
@@ -23,7 +23,7 @@ Express - Web Framework that runs on node.
 Angular - Client side development platform
 Node - (Javascript) Execution Environment.
 ```
-
+------
 ### MEAN Stack Architecture
 <img src="static/mean_stack_architecture.png" width=700>
 
