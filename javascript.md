@@ -49,7 +49,7 @@ Figure : javascript loading methods
 
 
 > **Hoisting** : It is Javascript default behaviour of moving declarations to the top.
-   > Example : var x;
+  - Example : var x;
 > **Note** : Initializations are not hoisted. Example var x = 5;
 
 
