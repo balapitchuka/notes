@@ -47,10 +47,16 @@ Figure : javascript loading methods
 - **Constants** names are all **capital letters**
 - End each statement with a semicolon(not neccessary but a good practice)
 
-
-> **Hoisting** : It is Javascript default behaviour of moving declarations to the top.
+### Declaration and Definition
+**Declaration** : var x is a declaration because you have not defined what value it holds.
+**Definition and Definition** : var x = 1 is both a declaration and definition (also we can say we are doing an initialisation) 
+ 
+> **Hoisting** : It is Javascript default behaviour of moving declarations to the top. 
+  - Every variable or function declaration you bring to the top of its current scope is called hoisting
   - Example : var x;
-> **Note** : Initializations are not hoisted. Example var x = 5;
+> **Note** : Initializations are not hoisted. 
+  - Example var x = 5;
+
 
 
 
