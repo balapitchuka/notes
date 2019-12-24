@@ -26,4 +26,9 @@ Node - (Javascript) Execution Environment.
 ------
 ### MEAN Stack Architecture
 <img src="static/mean_stack_architecture.png" width=700>
+1. The client first interacts with the user interface, which is built using the Angular frontend framework. 
+2. Requests made on the interface are passed to Node.js, the server-side engine. 
+3. Then, the middleware framework known as Express.js makes a request to MongoDB, which is the database. 
+4. Express.js retrieves the response in the form of data from the database. 
+5. Finally, this response is then returned by Node.js to the client via the user display
 
