@@ -1,4 +1,4 @@
-
+<img src="static/mean_stack.png" width=500>
 
 Reference taken from codevolution mean stack tutorial
 Video player application:
