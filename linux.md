@@ -40,3 +40,15 @@ an
 reader@ubuntu:~$ echo ${array[3]}
 array
 ```
+
+#### Array Exceptions
+1. Shell does not raise exceptions for accessing array out of bound indexes.
+2. Observe 0 return value for bellow second command indicating, no error is raised.
+```shell
+reader@ubuntu:~$ echo ${array[4]}
+ # <- Nothing is printed here.
+reader@ubuntu:~$ echo $?            
+0
+reader@ubuntu:~$ echo ${array[*]}
+This is an array
+```
