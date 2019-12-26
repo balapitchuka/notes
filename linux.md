@@ -1,3 +1,6 @@
+### Referecences
+https://github.com/PacktPublishing/Learn-Linux-Shell-Scripting-Fundamentals-of-Bash-4.4
+
 ### The Linux Filesystem
 1. Everything is a file
 2. A **filesystem** is, in essence, the way data is stored and retrieved on a physical medium (which can be a hard disk, 
