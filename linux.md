@@ -27,3 +27,16 @@ Btrfs
 
 ### Everything is a file
 > On a Linux system, everything is a file; if something is not a file, it is a process.
+
+### Arrays
+```linux
+reader@ubuntu:~$ array=("This" "is" "an" "array")
+reader@ubuntu:~$ echo ${array[0]}
+This
+reader@ubuntu:~$ echo ${array[1]}
+is
+reader@ubuntu:~$ echo ${array[2]}
+an
+reader@ubuntu:~$ echo ${array[3]}
+array
+```
