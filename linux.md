@@ -1,8 +1,8 @@
 ### References
 https://github.com/PacktPublishing/Learn-Linux-Shell-Scripting-Fundamentals-of-Bash-4.4
 
-
-###  Trailing $ or #
+------
+###  Trailing '$' or '#'
 In the Bourne family of shells,
  - Trailing '$'  generally means you are logged in as a **regular user**
  - Trailing '#' means you are **root**
