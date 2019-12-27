@@ -1,9 +1,9 @@
 # Comprehensive Linux Guide
 
 ### References
-https://github.com/PacktPublishing/Learn-Linux-Shell-Scripting-Fundamentals-of-Bash-4.4
+* https://github.com/PacktPublishing/Learn-Linux-Shell-Scripting-Fundamentals-of-Bash-4.4
 
-------
+
 ###  Trailing '$' or '#'
 In the Bourne family of shells,
  - Trailing '$'  generally means you are logged in as a **regular user**
