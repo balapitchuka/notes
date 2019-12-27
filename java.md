@@ -1,4 +1,5 @@
 # Table Of Contents
+- [ Java Strings ](#java-strings)
 - [ Variable Types(local, instance, static) ](#variabletypes)
 - [ Constructors ](#constructors)
 - [ Maven ](#maven)
@@ -77,5 +78,128 @@ Version      -- A specific release version like : 1.0, 1.6, 2.0
 
 ```
 #### Note: Sometimes project coordinates are referred as GAV(GroupID, ArtifactID, Version)
+
+# Comprehensive Java Guide
+
+<a name="java-strings"></a>
+## Java Strings
+* String is a sequence of characters. But in Java, **string is an object** that represents a sequence of characters. 
+* The **java.lang.String** class is used to create a string object
+
+### Creating a String object
+```java
+// using 'String Literal'(creating a new object if not exists, else assign a reference of already 
+// existing object
+String s="welcome";   
+
+Note: String objects are stored in a special memory area known as the "string constant pool".
+
+// using  'new keyword' (new object is created always)
+String s=new String("Welcome");  
+
+// using char array
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};  
+String s=new String(ch);
+
+```
+
+* **String objects are immutable**
+* **Once String object is created its data or state can't be changed but a new String object is created**
+
+### String compare methods
+* **Comparing content**
+   - **s1.equals(s2)** returns boolean value
+   - **s1.equalsIgnoreCase(s2)** return boolean value
+   - **s1.compareTo(s2)** compares values lexicographically and returns an integer value
+       - s1 == s2  returns 0
+       - s1 > s2   returns positive value
+       - s1 < s2   returns negative value
+* Comparing object reference
+   - **s1==s2** return boolean value
+   
+### String concatenation
+  - using **+ (string concatenation) operator**
+     - **String s="Sachin"+" Tendulkar";**  returns new String object
+  - using **concat() method**
+     - **String s3=s1.concat(s2);** returns new String object
+** Typical concatenation example**  
+```java
+class TestStringConcatenation2{  
+ public static void main(String args[]){  
+   String s=50+30+"Sachin"+40+40;  
+   System.out.println(s);  //80Sachin4040  
+ }  
+}  
+
+Note: After a string literal, all the + will be treated as string concatenation operator.
+```
+### String substring
+```
+public class TestSubstring{  
+ public static void main(String args[]){  
+   String s="SachinTendulkar";  
+   System.out.println(s.substring(6));//Tendulkar  
+   System.out.println(s.substring(0,6));//Sachin  
+ }  
+}
+```
+
+### String intern method
+* A pool of strings, initially empty, is maintained privately by the class String.
+* When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the     equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and 
+a reference to this String object is returned.
+
+```java
+String s=new String("Sachin");  
+String s2=s.intern();  
+System.out.println(s2);//Sachin  
+
+```
+
+### Common String methods
+```java
+// 1. UpperCase and LowerCase
+String s="Sachin";  
+System.out.println(s.toUpperCase());//SACHIN  
+System.out.println(s.toLowerCase());//sachin
+
+// 2. trim() method eliminates white spaces before and after string
+String s="  Sachin  ";  
+System.out.println(s);//  Sachin    
+System.out.println(s.trim());//Sachin
+
+// 3. startsWith() and endsWith() method
+String s="Sachin";  
+System.out.println(s.startsWith("Sa"));//true  
+System.out.println(s.endsWith("n"));//true
+
+// 4. charAt() method returns a character at specified index
+String s="Sachin";  
+System.out.println(s.charAt(0));//S  
+System.out.println(s.charAt(3));//h  
+
+// 5. length() method returns length of the string.
+String s="Sachin";  
+System.out.println(s.length());//6  
+
+// 6. valueOf() method coverts given type such as int, long, float, double, boolean, char 
+// and char array into string
+int a=10;  
+String s=String.valueOf(a);  
+System.out.println(s+10); //1010
+
+// 7. replace() method replaces all occurrence of first sequence of character 
+// with second sequence of character
+String s1="Java is a programming language. Java is a platform. Java is an Island.";    
+String replaceString=s1.replace("Java","Kava");//replaces all occurrences of "Java" to "Kava"    
+System.out.println(replaceString);  
+//Kava is a programming language. Kava is a platform. Kava is an Island.
+
+
+
+
+```
+ 
+
 
 
