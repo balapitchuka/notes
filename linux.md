@@ -64,6 +64,9 @@ This is an array
 ```
 
 ### History
-The history command
-A very powerful and cool command in Bash is history. Simply put, by default, Bash will store a history of all the commands you type. These are saved up to a certain threshold, and for our Ubuntu 18.04 installation this is 1,000 commands in memory and 2,000 commands on disk. Every time you do a clean exit/logout of your terminal, Bash will write the command history from memory to disk, taking both limits into account.
+* By default, **Bash** will store a history of all the commands you type.
+* These are saved up to a certain threshold, and for our **Ubuntu 18.04 installation** this is **1,000 commands in memory and 2,000 commands on disk.** 
+* Every time you do a clean exit/logout of your terminal, Bash will write the command history from memory to disk, taking both limits into account.
+
+
 
