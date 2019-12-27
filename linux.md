@@ -8,7 +8,9 @@ https://github.com/PacktPublishing/Learn-Linux-Shell-Scripting-Fundamentals-of-B
 In the Bourne family of shells,
  - Trailing '$'  generally means you are logged in as a **regular user**
  - Trailing '#' means you are **root**
-
+### Linux Prompt
+* **user_name@machine_name:~$**
+* Example:  typical Linux prompt for a user named jp on a machine called adams, sitting in the home directory
 ### The Linux Filesystem
 1. Everything is a file
 2. A **filesystem** is, in essence, the way data is stored and retrieved on a physical medium (which can be a hard disk, 
