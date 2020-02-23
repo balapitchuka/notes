@@ -1,5 +1,5 @@
 # Table Of Contents
-1. [ Null and Undefined. ](#null_undefined)
+1. [ null and undefined. ](#null_undefined)
 2. [Type annotation and Type inference ](#annotation_inference)
 
 
