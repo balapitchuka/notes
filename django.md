@@ -11,3 +11,10 @@ Recommended ordering for models in django:
 * def get_absolute_url()
 * custom methods
 ```
+
+## Django Rest Framework
+
+### APIView (User When need of full control over the logic):
+ - Gives more control over the logic.
+ - Perfect for implementing complex logic.
+ 
