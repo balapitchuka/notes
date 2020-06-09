@@ -38,6 +38,8 @@ Consists of :
 - **Alpha Testing**
 - **Beta Testing**
 - **System Testing** 
+- **Stress Testing**
+- **Performance Testing**
 
    
 
