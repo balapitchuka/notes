@@ -25,7 +25,7 @@
 
 ### TTD (Test Driven Development)
 - Tests drive the code
-   - **Red -> Green -> Refactor**
+   - **Red (Test fails) -> Green(Test passes) -> Refactor (Code and Tests)**
 - Involves following steps
    - 1. A new test will initially fail.
    - 2. We work and write application code to get the test pass.
