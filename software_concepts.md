@@ -23,7 +23,6 @@ Consists of :
 
 - **Unit Testing** 
    - It focuses on testing smallest unit of software design. Eg: a function etc.
-
 - **Integration Testing** 
    - Integration testing is testing in which a group of components are combined to produce output.
    - Examples:
@@ -34,11 +33,8 @@ Consists of :
        - (b) **White Box testing**:- It is used for **verification**. 
          In this we focus on internal mechanism i.e.
          **how the output is achieved?**
-
 - **Regression Testing **
-   - 
 - **Smoke Testing **
-   -
 - **Alpha Testing **
 - **Beta Testing **
 - **System Testing** 
