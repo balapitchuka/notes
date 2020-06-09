@@ -5,6 +5,7 @@
 
 - **Unit Testing** 
    - It focuses on testing smallest unit of software design. Eg: a function etc.
+   - Tests single units of functionality in isolation hence call **unittesting**
 - **Integration Testing** 
    - Integration testing is testing in which a group of components are combined to produce output.
    - Examples:
