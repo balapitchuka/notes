@@ -33,10 +33,10 @@ Consists of :
        - (b) **White Box testing**:- It is used for **verification**. 
          In this we focus on internal mechanism i.e.
          **how the output is achieved?**
-- **Regression Testing **
-- **Smoke Testing **
-- **Alpha Testing **
-- **Beta Testing **
+- **Regression Testing**
+- **Smoke Testing**
+- **Alpha Testing**
+- **Beta Testing**
 - **System Testing** 
 
    
