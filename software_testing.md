@@ -1,5 +1,7 @@
 
-## Software Testing
+# Software Testing
+
+### Types Of Software Testing:
 
 - **Unit Testing** 
    - It focuses on testing smallest unit of software design. Eg: a function etc.
@@ -20,3 +22,11 @@
 - **System Testing** 
 - **Stress Testing**
 - **Performance Testing**
+
+### TTD (Test Driven Development)
+- Tests drive the code
+   - **Red -> Green -> Refactor**
+- Involves following steps
+   - 1. A new test will initially fail.
+   - 2. We work and write application code to get the test pass.
+   - 3. We finally optimize our code and tests
