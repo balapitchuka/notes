@@ -25,6 +25,7 @@
 - **Performance Testing**
 
 ### TTD (Test Driven Development)
+- **TDD mantra is “Test first, code later”**
 - Tests drive the code
    - **Red (Test fails) -> Green(Test passes) -> Refactor (Code and Tests)**
 - Involves following steps
