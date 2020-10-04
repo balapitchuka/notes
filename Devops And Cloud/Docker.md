@@ -3,7 +3,7 @@
 > https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
 ### Docker references
-1. [Udemy-docker-and-kubernetes-the-complete-guide](https://github.com/StephenGrider/DockerCasts)
+1. [Udemy Docker-and-Kubernetes-The-Complete-Guide](https://github.com/StephenGrider/DockerCasts)
 
 ### Docker Commands
 - check docker installation
