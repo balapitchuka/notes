@@ -8,6 +8,8 @@
 ### Docker Terminology
 - Docker Image
   - Image = File System Snapshot + default run command
+- Docker Run
+  - 
 
 ### Docker Commands
 - Check docker installation
@@ -41,3 +43,19 @@ Eg:  docker run busybox echo hi there
 ```
 docker ps
 ```
+
+- List all container ran till now and there status
+```
+docker ps --all
+Eg:
+root@linux:/home/bala# docker ps --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                         PORTS               NAMES
+904035cc9ad0        busybox             "ping google.com"   4 minutes ago       Exited (0) 9 seconds ago                           sleepy_shamir
+3630c151ab75        busybox             "echo hi there"     10 minutes ago      Exited (0) 10 minutes ago                          pensive_ganguly
+9c99caf87d2a        busybox             "ls"                12 minutes ago      Exited (0) 12 minutes ago                          naughty_margulis
+64dda0d56dbf        busybox             "sh"                13 minutes ago      Exited (0) 12 minutes ago                          romantic_keller
+f18e5aecdd72        busybox             "sh"                13 minutes ago      Exited (0) 13 minutes ago                          compassionate_buck
+783ddc77ff89        hello-world         "/hello"            About an hour ago   Exited (0) About an hour ago                       boring_heyrovsky
+
+```
+
