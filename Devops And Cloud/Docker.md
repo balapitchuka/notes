@@ -10,23 +10,34 @@
   - Image = File System Snapshot + default run command
 
 ### Docker Commands
-- check docker installation
+- Check docker installation
 
 ```
 docker version
 ```
 
-- docker information
+- Get Docker information
 ```
 docker info
 ```
 
-- run hello-world image
+- Run hello-world image
 ```
 docker run hello-world
 ```
 
-- list all docker images
+- List all docker images
 ```
 docker images
+```
+- Override default run command
+```
+docker run busybox <override-command-here>
+
+Eg:  docker run busybox echo hi there
+```
+
+- List all running containers
+```
+docker ps
 ```
