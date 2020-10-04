@@ -4,17 +4,21 @@
 
 ### Docker Commands
 - check docker installation
-```docker version
+```
+docker version
 ```
 
 - docker information
-```docker info
+```
+docker info
 ```
 
 - run hello-world image
-```docker run hello-world
+```
+docker run hello-world
 ```
 
 - list all docker images
-```docker images
+```
+docker images
 ```
