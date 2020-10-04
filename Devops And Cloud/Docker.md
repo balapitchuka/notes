@@ -5,8 +5,13 @@
 ### Docker references
 1. [Udemy Docker-and-Kubernetes-The-Complete-Guide](https://github.com/StephenGrider/DockerCasts)
 
+### Docker Terminology
+- Docker Image
+  - Image = File System Snapshot + default run command
+
 ### Docker Commands
 - check docker installation
+
 ```
 docker version
 ```
