@@ -1,4 +1,11 @@
+# Python Notes
+
+[toc]
+
+
+
 # Table of Contents
+
 1. [Pythonic Thinking](#Pythonic-Thinking)
 2. [Example2](#example2)
 3. [Third Example](#third-example)
@@ -29,8 +36,8 @@
 ```
 
 #### Item2 : Follow the PEP8 style guide:
- 
- 
+
+
 #### Item3 : Know the difference between 'bytes', 'str', and 'unicode' :
 
 
@@ -118,4 +125,6 @@ for index, colr in enumerate(colors, 2):
 
 #### Item13: Take advantage of each block in try/except/else/finally
 
-# Functions
+
+
+## Automated Software Testing With Python

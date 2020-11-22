@@ -1,33 +1,32 @@
-# Table Of Contents
-- [ Java Strings ](#java-strings)
-- [ Variable Types(local, instance, static) ](#variabletypes)
-- [ Constructors ](#constructors)
-- [ Maven ](#maven)
+# Java Notes
 
+[toc]
 
-<a name="variabletypes"></a>
-## Variable Types:
-#### 1. Local variables:
+## Java Features
+
+- Java is a **platform independent** language.
+
+## Variable Types
+
+### Local Variables
+
 - Local variables are declared in methods, constructors, or blocks.
 - Access modifiers cannot be used for local variables.
 - Local variables are visible only within the declared method, constructor, or block.
 - Local variables are implemented at stack level internally.
 - There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
 
-#### 2. Instance variables:
+### Instance variables
+
 - Instance variables are declared in a class, but **outside a method, constructor or any block**.
 - Instance variables have default values. 
     - For numbers -> 0, for Booleans ->  false, and for object references -> null
-#### 3. Class/Static variables:
+### Class/Static variables
 - **Class variables** also known as **static variables** are declared with the static keyword in a class, but **outside** a method, constructor or a block.
 - **Static variables** are stored in the static memory. It is rare to use **static variables** other than declared final and used as either public or private constants.
 - Static variables are rarely used other than being declared as constants. Constants are variables that are declared as **public/private, final, and static**. Constant variables never change from their initial value.
 
-
-
-
-<a name="constructors"></a>
-## Constructors:
+## Constructors
 
 - Every class has a constructor whether it’s a **normal class** or an **abstract class**.
 
@@ -53,10 +52,12 @@
 - If Super class doesn’t have a no-arg(default) constructor then compiler would not insert a default constructor
   in child class as it does in normal scenario.
 
-<a name="maven"></a>
+
+
 ## Maven
-- dependency management
-- build tool
+
+- Dependency management
+- Build tool
 
 ### Project Coordinates
 1. Project Coordinates uniquely identify a project.
@@ -77,16 +78,16 @@ Version      -- A specific release version like : 1.0, 1.6, 2.0
                 If project is under active developement then : 1.0-SNAPSHOT
 
 ```
-#### Note: Sometimes project coordinates are referred as GAV(GroupID, ArtifactID, Version)
+Note: Sometimes project coordinates are referred as GAV(GroupID, ArtifactID, Version)
 
-# Comprehensive Java Guide
+## Comprehensive Java Guide
 
-<a name="java-strings"></a>
-## Java Strings
+### Java Strings
 * String is a sequence of characters. But in Java, **string is an object** that represents a sequence of characters. 
 * The **java.lang.String** class is used to create a string object
 
 ### Creating a String object
+
 ```java
 // using 'String Literal'(creating a new object if not exists, else assign a reference of already 
 // existing object
@@ -118,6 +119,7 @@ String s=new String(ch);
    - **s1==s2** return boolean value
    
 ### String concatenation
+
   - using **+ (string concatenation) operator**
      - **String s="Sachin"+" Tendulkar";**  returns new String object
   - using **concat() method**
@@ -199,7 +201,7 @@ System.out.println(replaceString);
 
 
 ```
- 
+
 
 
 

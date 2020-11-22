@@ -1,13 +1,13 @@
 # MEAN Stack
 
-|          Mean Stack           |
-| :---------------------------: |
-| ![mean_stack](mean_stack.jpg) |
+|                   Mean Stack                    |
+| :---------------------------------------------: |
+| ![mean_stack](static/mean_stack/mean_stack.jpg) |
 
 
 
 Reference taken from codevolution mean stack tutorial
-Video player application:
+video player application:
 
 1. Angular CLI
 2. Express server.
@@ -32,7 +32,7 @@ Node - (Javascript) Execution Environment.
 ```
 ------
 ### MEAN Stack Architecture
-![mean_stack_architecture](mean_stack_architecture.png)
+![mean_stack_architecture](static/mean_stack/mean_stack_architecture.png)
 
 1. The client first interacts with the user interface, which is built using the Angular frontend framework. 
 2. Requests made on the interface are passed to Node.js, the server-side engine. 

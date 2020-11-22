@@ -1,7 +1,14 @@
 # Comprehensive Linux Guide
 
-### References
+[toc]
+
+## References
+
 * https://github.com/PacktPublishing/Learn-Linux-Shell-Scripting-Fundamentals-of-Bash-4.4
+
+
+
+## Linux Terminal
 
 
 ###  Trailing '$' or '#'
@@ -11,7 +18,8 @@ In the Bourne family of shells,
 ### Linux Prompt
 * **user_name@machine_name:~$**
 * Example:  typical Linux prompt for a user named jp on a machine called adams, sitting in the home directory
-### The Linux Filesystem
+## The Linux Filesystem
+
 1. Everything is a file
 2. A **filesystem** is, in essence, the way data is stored and retrieved on a physical medium (which can be a hard disk, 
    solid state drive, or even RAM).
