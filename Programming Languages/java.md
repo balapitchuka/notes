@@ -6,9 +6,13 @@
 
 - Java is a **platform independent** language.
 
-## Variable Types
 
-### Local Variables
+
+## Object Oriented Concepts
+
+### Variable Types
+
+#### 1. Local Variables
 
 - Local variables are declared in methods, constructors, or blocks.
 - Access modifiers cannot be used for local variables.
@@ -16,43 +20,63 @@
 - Local variables are implemented at stack level internally.
 - There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
 
-### Instance variables
+#### 2. Instance variables
 
 - Instance variables are declared in a class, but **outside a method, constructor or any block**.
 - Instance variables have default values. 
     - For numbers -> 0, for Booleans ->  false, and for object references -> null
-### Class/Static variables
+#### 3. Class/Static variables
 - **Class variables** also known as **static variables** are declared with the static keyword in a class, but **outside** a method, constructor or a block.
 - **Static variables** are stored in the static memory. It is rare to use **static variables** other than declared final and used as either public or private constants.
 - Static variables are rarely used other than being declared as constants. Constants are variables that are declared as **public/private, final, and static**. Constant variables never change from their initial value.
 
-## Constructors
+
+
+### Constructors
 
 - Every class has a constructor whether it’s a **normal class** or an **abstract class**.
-
 - Like constructors method can also have name same as class name, but still they have 
   return type, though which  we can identify them that they are methods not constructors.
-  
 - this() and super() should be the **first statement** in the constructor code. 
   If you don’t mention them, compiler does it for you accordingly.
-  
 - Constructor **overloading** is **possible** but **overriding** is **not possible**. 
   Which means we can have overloaded   constructor in our class but we can’t override a constructor.
-  
 - Constructors can not be inherited.
-
 - Interfaces do not have constructors.
-
 - Abstract class can have constructor and it gets invoked when a class, which implements 
   interface, is instantiated. (i.e. object creation of concrete class).
-  
 - A constructor can also invoke another constructor of the same class – By using this(). 
   If you want to invoke a parameterized constructor then do it like this: this(parameter list).
-  
 - If Super class doesn’t have a no-arg(default) constructor then compiler would not insert a default constructor
   in child class as it does in normal scenario.
 
+### Interfaces
 
+- Interface provides full abstraction in java(as none of its methods have body)
+
+- An Interface in java
+
+	- cannot implement other interface.
+	- has  all methods by default abstract and public
+	- all variables are public, static and final by default
+
+	```
+	interface Try{
+	   int a = 10;
+	   public int a = 10;
+	   public static final int a = 10;
+	   final int a = 10;
+	   static int a = 10;
+	}
+	
+	// All these declarations are equal
+	```
+
+	
+
+	- all variables must be initialized at the time of declaration otherwise compiler will throw an error
+
+- A class can implement any number of interfaces
 
 ## Maven
 

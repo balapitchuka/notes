@@ -17,4 +17,4 @@ Recommended ordering for models in django:
 ### APIView (User When need of full control over the logic):
  - Gives more control over the logic.
  - Perfect for implementing complex logic.
- 
+

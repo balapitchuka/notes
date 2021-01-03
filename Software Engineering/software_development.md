@@ -2,6 +2,19 @@
 
 [toc]
 
+
+
+
+
+
+
+## Continuous Integration and Continuous Delivery
+
+### What is Devops?
+
+- **It is a philosophy, a set of rules and practices that define a culture that aims to bridge the gap between the development and operation teams**
+- The purpose of devops is to facilitate and encourage collaboration between departments
+
 ## Automation and Orchestration
 
 - **For**

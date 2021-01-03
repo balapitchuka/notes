@@ -8,7 +8,10 @@
 	| :----------------------------------------------------------: |
 	| Linux was written from scratch. **Torvalds** read up on how unix works and replicated the functionality. He did not have any unix source code to use for linux development. |
 
-	
 
 
+
+### Quantifiable
+
+- able to be expressed or measured as a quantity.
 
