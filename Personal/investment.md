@@ -16,4 +16,13 @@
 4. Longterm investment(maximum future returns)
 
 
+#### Large Cap Funds
+- Invest in india's top companies interms of market capitalisation
+- Top 1-100 companies
 
+#### Multi Cap Fund
+- Sectors and companies diversity will be more as they invest in diversified portfolios
+
+100 - large cap companies
+150 - mid cap companies
+5000+ - small cap companies
