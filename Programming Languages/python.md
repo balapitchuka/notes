@@ -2,7 +2,15 @@
 
 [toc]
 
+> Python2.7 is last version of python 2 not python2.8
 
+Python is used for:
+- Web development(serverside)
+- software development (alongside software to create workflows)
+- mathematics(big data + complex match)
+- System scripting
+- Rapid prototyping(using python to design and build logic for a prototype application) 
+- for production ready software development
 
 # Table of Contents
 

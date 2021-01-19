@@ -5,6 +5,11 @@
 
 
 
+### What is Rapid Prototyping
+- Rapid Prototyping involves creating a working model of various parts of the system at a very early stage, after a relatively short investigation.
+- The method used in building it is usally quite informal, the most important factor being the speed with which the model is produced.
+- The model then becomes the starting point from which users can re-examine their expectations and clarify their requirements
+- When this has been achieved, the prototype model is 'thrown away' and the system is formally developed based on the identified requirements.
 
 
 
