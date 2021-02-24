@@ -8,6 +8,39 @@
 
 
 
+## Java Basics
+
+Float vs Double
+
+- Difference between float and double is their storage requirement, double is more expensive than float. It takes 8 bytes to store a variable while float just takes 4 bytes
+
+- It's also worth noting that floating-point numbers or real numbers are `by default double` in Java.
+
+- Both double and float are approximate types, they are not precise.
+
+- You should use logical operator e.g  > or < to compare both float and double variables, instead of = and != because they are not precise.
+
+  ```
+  public static final float PIE = 3.14; // compile time error
+  
+  Use cast
+  public static final float PIE = (float) 3.14;
+  
+  or suffix 'f' or 'F'
+  
+  public static final float PIE = 3.14f;
+  public static final float GRAVITY = 9.8F;
+  
+  ```
+
+  
+
+
+
+
+
+
+
 ## Object Oriented Concepts
 
 ### Variable Types
@@ -15,10 +48,10 @@
 #### 1. Local Variables
 
 - Local variables are declared in methods, constructors, or blocks.
-- Access modifiers cannot be used for local variables.
+- `Access modifiers` cannot be used for local variables.
 - Local variables are visible only within the declared method, constructor, or block.
 - Local variables are implemented at stack level internally.
-- There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
+- There is `no default value for local variables`, so local variables should be declared and an initial value should be assigned before the first use.
 
 #### 2. Instance variables
 
