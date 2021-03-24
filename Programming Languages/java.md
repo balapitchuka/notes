@@ -12,7 +12,7 @@
 
 Float vs Double
 
-- Difference between float and double is their storage requirement, double is more expensive than float. It takes 8 bytes to store a variable while float just takes 4 bytes
+- Difference between float and double is their storage requirement, double is more expensive than float. It takes 8 bytes to store a variable while float just takes 4 bytes.
 
 - It's also worth noting that floating-point numbers or real numbers are `by default double` in Java.
 
@@ -135,13 +135,13 @@ Version      -- A specific release version like : 1.0, 1.6, 2.0
                 If project is under active developement then : 1.0-SNAPSHOT
 
 ```
-Note: Sometimes project coordinates are referred as GAV(GroupID, ArtifactID, Version)
+Note: Sometimes project coordinates are referred as **GAV Coordinates**(GroupID, ArtifactID, Version)
 
 ## Comprehensive Java Guide
 
 ### Java Strings
 * String is a sequence of characters. But in Java, **string is an object** that represents a sequence of characters. 
-* The **java.lang.String** class is used to create a string object
+* The **java.lang.String** class is used to create a string object.
 
 ### Creating a String object
 
@@ -156,7 +156,7 @@ Note: String objects are stored in a special memory area known as the "string co
 String s=new String("Welcome");  
 
 // using char array
-char[] ch={'j','a','v','a','t','p','o','i','n','t'};  
+char[] ch = {'j','a','v','a','t','p','o','i','n','t'};  
 String s=new String(ch);
 
 ```
@@ -205,8 +205,7 @@ public class TestSubstring{
 
 ### String intern method
 * A pool of strings, initially empty, is maintained privately by the class String.
-* When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the     equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and 
-a reference to this String object is returned.
+* When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the     equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and a reference to this String object is returned.
 
 ```java
 String s=new String("Sachin");  
