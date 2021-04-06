@@ -17,10 +17,10 @@
 
 - TCP is expensive it requires memory and all descriptors to be set in the server
 
-- So when client send a request to server an tcp connection is opened and connects closed once the server is responded
+- So when client send a request to server an tcp connection is opened and connection gets closed once the server is responded
 - Every HTTP request made in this way establishes tcp connnection and closes once the request is fullfilled by the server. This literally killed the performance
 
-- When HTTP1.1 is introducted, it supported websocketsm, i.e when tcp connection is opened the client and server can communicate continuously and can close connnectino when the communication finishes
+- When HTTP1.1 is introducted, it supported websockets, i.e when tcp connection is opened the client and server can communicate continuously and can close connnection when the communication finishes
 
 - So websockets use persistent TCP connection  as a vehicle to send data from client to server and server to client and they both aware of each other which means they no longer stateless its a stateful connection. 
 

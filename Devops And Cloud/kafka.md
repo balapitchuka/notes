@@ -97,6 +97,9 @@ ls /brokers
 ls /brokers/ids
 ```
 
+#### Zookeeper removal from apache kafka
+[Preparing Your Clients and Tools for KIP-500: ZooKeeper Removal from Apache Kafka](ZooKeeper Removal from Apache Kafka)
+
 
 
 ### Controller
