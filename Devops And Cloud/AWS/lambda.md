@@ -30,6 +30,6 @@
 
 
 ### Advantages of Serverless Framework
-All using programming(not manual clicks in the aws console)
-Can be integrated with Continuous Integration frameworks
-Can be integrated with Continuous Delivery frameworks
+- All using programming(not manual clicks in the aws console)
+- Can be integrated with Continuous Integration frameworks
+- Can be integrated with Continuous Delivery frameworks
