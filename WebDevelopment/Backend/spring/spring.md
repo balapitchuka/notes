@@ -165,7 +165,111 @@ public class EmployeeController {
     ...
 </dependencies>
 ```
+
+#### Lombok Annotations
+@Data for Mutable Classes
+
+@Data is a shortcut annotation that combines @Getter, @Setter, @RequiredArgsConstructor, @ToString, and @EqualsAndHashCode.
+
+```java
+
+@Data
+public class Employee {
+
+    private String name;
+    private int salary;
+}
+
+Is equal to 
+
+@Getter
+@Setter
+@RequiredArgsConstructor
+@ToString
+@EqualsAndHashCode
+public class EmployeeExpanded {
+
+    private String name;
+    private int salary;
+}
+
+
+When we expand the @Data annotation, Employee becomes:
+
+public class Employee {
+
+    private String name;
+    private int salary;
+
+    public Employee() {
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getSalary() {
+        return this.salary;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (!(o instanceof Employee)) {
+            return false;
+        }
+        final Employee other = (Employee) o;
+        if (!other.canEqual((Object) this)) {
+            return false;
+        }
+        final Object this$name = this.getName();
+        final Object other$name = other.getName();
+        if (this$name == null ? other$name != null : !this$name.equals(other$name)) {
+            return false;
+        }
+        if (this.getSalary() != other.getSalary()) {
+            return false;
+        }
+        return true;
+    }
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof Employee;
+    }
+
+    public int hashCode() {
+        final int PRIME = 59;
+        int result = 1;
+        final Object $name = this.getName();
+        result = result * PRIME + ($name == null ? 43 : $name.hashCode());
+        result = result * PRIME + this.getSalary();
+        return result;
+    }
+
+    public String toString() {
+        return "Employee(name=" + this.getName() + ", salary=" + this.getSalary() + ")";
+    }
+}
+
+```
+
 2. @Getter @Setter @NoArgsConstructor
+
+
+
+
+#### Rolling Lombok Back?
+
+By delombok-ing our code, we get auto-generated Java source code with exactly the same features from the bytecode Lombok built. We can then simply replace our original annotated code with these new delomboked files, and no longer depend on it.
 
 
 
