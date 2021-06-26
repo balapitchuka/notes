@@ -11,6 +11,29 @@
   + A Control-plane-node type, which makes up the Control Plane, acts as the “brains” of the cluster.
   + A Worker-node type, which makes up the Data Plane, runs the actual container images (via pods).
 
++ Hence A Kubernetes cluster is split into two parts:
+  + The Kubernetes Control Plane
+  + The (worker) nodes
+
+
+### Components of the Control Plane
+The Control Plane is what controls and makes the whole cluster function. 
+The components that make up the Control Plane are:
+  ```
+  The etcd distributed persistent storage
+  The API server
+  The Scheduler
+  The Controller Manager
+  ```
+These components store and manage the state of the cluster, but they aren’t what runs the application containers.
+
+### Components running on the worker nodes
+The task of running your containers is up to the components running on each worker node:
+```
+The Kubelet
+The Kubernetes Service Proxy (kube-proxy)
+The Container Runtime (Docker, rkt, or others)
+```
 
 - kubectl
     - used in `managing containers` in the node
@@ -24,6 +47,8 @@
 
 
 ## Kubernetes Components
+
+### Pods
 
 ### Services
 Getting Started with Communication
