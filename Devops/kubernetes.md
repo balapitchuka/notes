@@ -1,4 +1,7 @@
 # Kubernetes Notes
+- Open source container orchestration tool
+- Developed by Google
+- Helps you manage containerized applications in different deployment environments like physical, virtual machines or cloud environments.
 
 ## References
 - AWS EKS workshop 
