@@ -52,6 +52,10 @@ The Container Runtime (Docker, rkt, or others)
 ## Kubernetes Components
 
 ### Pods
+- Smallest units of k8s
+- Abstraction over container
+- Usally 1 application per pod
+- Each pod gets its own IP address
 
 ### Services
 Getting Started with Communication
