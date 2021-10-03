@@ -55,7 +55,7 @@ The Container Runtime (Docker, rkt, or others)
 - Smallest units of k8s
 - Abstraction over container
 - Usally 1 application per pod
-- Each pod gets its own IP address
+- Each pod gets its own IP address(New IP address on re-creation of pod once its dies)
 
 ### Services
 Getting Started with Communication
