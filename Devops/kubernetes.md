@@ -3,7 +3,7 @@
 - Developed by Google
 - Helps you manage containerized applications in different deployment environments like physical, virtual machines or cloud environments.
 
-<span style="color:blue">some *blue* text</span>.
+
 
 ## References
 - AWS EKS workshop 
