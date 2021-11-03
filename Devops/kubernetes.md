@@ -64,6 +64,10 @@ The Container Runtime (Docker, rkt, or others)
 
 ## Kubernetes Components <a name="KubernetesComponents"></a>
 
+|                   Kubernetes Components         |
+| :---------------------------------------------: |
+| ![mean_stack](static/kubernetes/kubernetes_cluster_components.png) |
+
 ### Pods
 - Smallest units of k8s
 - Abstraction over container
