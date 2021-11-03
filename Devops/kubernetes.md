@@ -1,11 +1,22 @@
 # Kubernetes Notes
+This notes contains a cheatsheet of all kubernetes concepts collected from various resources
+
+## Table of Contents
+1. [References](#References)
+2. [Kubernetes Components](#KubernetesComponents)
+3. [Learning Resources](#Learning)
+4. [Additional Examples](#AddEx)
+
+
+
+
 - Open source container orchestration tool
 - Developed by Google
 - Helps you manage containerized applications in different deployment environments like physical, virtual machines or cloud environments.
 
 
 
-## References
+## References <a name="References"></a>
 - AWS EKS workshop 
   - https://www.eksworkshop.com/010_introduction/basics/concepts_nodes/
 
@@ -51,7 +62,7 @@ The Container Runtime (Docker, rkt, or others)
     - ```minicube status```
 
 
-## Kubernetes Components
+## Kubernetes Components <a name="KubernetesComponents"></a>
 
 ### Pods
 - Smallest units of k8s
