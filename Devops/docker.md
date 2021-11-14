@@ -10,6 +10,16 @@
 ### Docker references
 1. [Udemy Docker-and-Kubernetes-The-Complete-Guide](https://github.com/StephenGrider/DockerCasts)
 
+### Linux features which are key for container world
+- Namespaces
+	- Namespaces have been part of the Linux kernel since about 2002, and over time more tooling and namespace types have been added. 
+	- Real container support was added to the Linux kernel only in 2013, however. This is what made namespaces really useful and brought them to the masses.
+	- Namespaces are a feature of the Linux kernel that partitions kernel resources such that one set of processes sees one set of resources while another set 	     of processes sees a different set of resources.
+	-  **key feature of namespaces is that they isolate processes from each other**
+- Cgroups
+
+
+
 
 
 ### Docker vs Virtual Machines
