@@ -32,7 +32,15 @@ Within the Linux kernel, there are different types of namespaces. Each namespace
 -  interprocess communication (IPC) namespace : has its own IPC resources, for example POSIX message queues.
 - UNIX Time‑Sharing (UTS) namespace : allows a single system to appear to have different host and domain names to different processes.
 
+##### Cgroups
+A control group (cgroup) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, and so on) of a collection of processes
 
+Cgroups provide the following features:
+
+Resource limits – You can configure a cgroup to limit how much of a particular resource (memory or CPU, for example) a process can use.
+Prioritization – You can control how much of a resource (CPU, disk, or network) a process can use compared to processes in another cgroup when there is resource contention.
+Accounting – Resource limits are monitored and reported at the cgroup level.
+Control – You can change the status (frozen, stopped, or restarted) of all processes in a cgroup with a single command.
 
 ### Docker vs Virtual Machines
 |                   VirtualMachines Vs Docker     |
