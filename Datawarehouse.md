@@ -1,3 +1,8 @@
+What is Data Warehouse?
+A Data Warehouse is a large store of data that’s collected from multiple different sources within a business.A data warehouse is used as storage for data analytic work (OLAP systems), leaving the transactional database (OLTP systems) free to focus on transactions. With a significant amount of data kept in one place, it’s now easier for businesses to analyze and make better-informed decisions.
+
+
+
 
 What is Presto?
 
