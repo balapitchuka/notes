@@ -16,4 +16,12 @@ What is Presto?
 - Used by a community of well known, well respected technology companies like Facebook, Airbnb, Netflix, Groupon etc
 
 
+History of Presto
+- FALL 2018 : Facebook open sources `Hive`
+- FALL 2012 : 6 developers start Presto development
+- Facebook commence development effort of presto in 2012
+- Spring 2013 :  Presto rolled out within Facebook
+- FALL 2013 : Facebook opensources Presto
+- FALL 2014  : 88 Releases, 41 Contributors, 3943 Commits
+- Spring 2015 :  98 Releases, 65 Contributors, 4587 Commits  and Teradata joins Presto community and offers support 
 
