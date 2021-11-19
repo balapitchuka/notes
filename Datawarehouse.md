@@ -24,6 +24,13 @@ The three most popular data models for warehouses are:
 
 
 
+### Apache Parquet
+- Parquet is an open source file format available to any project in the Hadoop ecosystem. 
+- Apache Parquet is designed for efficient as well as performant flat columnar storage format of data compared to row based files like CSV or TSV files.
+
+
+
+
 ### What is Presto?
 
 - 100% open source distributed ANSI SQL query engine for Big Data(for running interactive analytical queries against datasources of all sizes
