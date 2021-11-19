@@ -7,12 +7,13 @@ What is Presto?
   like Facebook
 - Facebook uses presto for interactive queries against several internal datastores including that 300 petabytes data
   warehouse 
+- A huge testament to Preesto's scalability and performance distributed under the apache license and now supported by   teradata
 - Modern architecture and implementation
 - Proven scalability and performance
-- Optimized for low latency, interactive querying
+- Optimized for `low latency`, `interactive querying`
 - Cross platform query capability, not only SQL on Hadoop
 - Distributed under the Apache license, now supported by  Teradata
-- Used by a community of well known, well respected technology companies
+- Used by a community of well known, well respected technology companies like Facebook, Airbnb, Netflix, Groupon etc
 
 
 
