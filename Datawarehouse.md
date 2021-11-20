@@ -1,3 +1,11 @@
+
+## BigData
+
+
+## Data Warehouse vs Database#
+
+## Big Data vs Data Warehouse
+
 # What is Data Warehouse?
 
 - A Data Warehouse is a large store of data that’s collected from multiple different sources within a business.A data warehouse is used as storage for data analytic work (OLAP systems), leaving the transactional database (OLTP systems) free to focus on transactions. With a significant amount of data kept in one place, it’s now easier for businesses to analyze and make better-informed decisions.
@@ -73,8 +81,16 @@ The three most popular data models for warehouses are:
 
 ## Map Reduce
 
-## yARN
+## YARN(Yet Another Resource Manager)
+- YARN can be thought of as analogous of an operating system for a cluster.
 
+YARN has two major responsibilities
+- Management of cluster resources such as compute, network, and memory
+- Scheduling and monitoring of jobs
+
+YARN achieves these goals through two long-running daemons:
+- Resource Manager
+- Node Manager
 
 ## Flume
 - Flume is known as a distributed, trusted, and accessible service for efficiently gathering, aggregating, and moving a lot of log data
