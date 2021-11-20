@@ -1,4 +1,4 @@
-### What is Data Warehouse?
+# What is Data Warehouse?
 
 - A Data Warehouse is a large store of data that’s collected from multiple different sources within a business.A data warehouse is used as storage for data analytic work (OLAP systems), leaving the transactional database (OLTP systems) free to focus on transactions. With a significant amount of data kept in one place, it’s now easier for businesses to analyze and make better-informed decisions.
 
@@ -7,7 +7,7 @@
 - Data warehouses help you run logical queries, build accurate forecasting models, and identify impactful trends throughout your organization.
 
 
-What is Data Mart?
+### What is Data Mart?
 - A data mart is an area within a data warehouse that stores data for a specific business function.
 
 Example:
@@ -60,4 +60,11 @@ The three most popular data models for warehouses are:
 
 ## OLAP
 - Online Analytical Processing
+
+## Big Data file formats
+
+- **Text/CSV Files**: These are the usual delimited files that you normally see for most raw.
+- **Avro**: Apache Avro is a data serialization system that provides a compact, fast binary format. It relies on schemas to make sense of the data in the file.
+- **Parquet**: Apache Parquet is a columnar storage format that can be used by different projects in the Hadoop ecosystem. It is built to support very efficient compression and encoding schemes.
+- **ORC (optimized Row Columnar)**: In this format data is stored in a hybrid fashion, it stores collections of rows and within a collection different columns. It also introduces indexing and statistics like min and max.
 - 
