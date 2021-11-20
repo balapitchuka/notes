@@ -67,4 +67,29 @@ The three most popular data models for warehouses are:
 - **Avro**: Apache Avro is a data serialization system that provides a compact, fast binary format. It relies on schemas to make sense of the data in the file.
 - **Parquet**: Apache Parquet is a columnar storage format that can be used by different projects in the Hadoop ecosystem. It is built to support very efficient compression and encoding schemes.
 - **ORC (optimized Row Columnar)**: In this format data is stored in a hybrid fashion, it stores collections of rows and within a collection different columns. It also introduces indexing and statistics like min and max.
-- 
+
+
+## HDFS
+
+## Map Reduce
+
+## yARN
+
+
+## Flume
+- Flume is known as a distributed, trusted, and accessible service for efficiently gathering, aggregating, and moving a lot of log data
+
+## SQOOP
+
+## Hive
+- Map Reduce is difficult and for a few developers, a totally unique method for handling data processing than they are conversant with
+- The most widely recognized language to manage data is SQL, also, Apache Hive is referred to as a project that allows you develop SQL alike warehouse of your data on Hadoop top.
+## Pig
+- Apache Pig offers a high-level scripting language, popularly used for the writing of data pipelines in the world of Hadoop.
+- The scripting language is known as Pig Latin.
+
+## Spark
+
+## HBase
+
+
