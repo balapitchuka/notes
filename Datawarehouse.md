@@ -57,3 +57,7 @@ The three most popular data models for warehouses are:
 - FALL 2014  : 88 Releases, 41 Contributors, 3943 Commits
 - Spring 2015 :  98 Releases, 65 Contributors, 4587 Commits  and Teradata joins Presto community and offers support 
 
+
+## OLAP
+- Online Analytical Processing
+- 
