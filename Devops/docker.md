@@ -146,5 +146,5 @@ f18e5aecdd72        busybox             "sh"                13 minutes ago      
 A Docker Swarm is a group of either physical or virtual machines that are running the Docker application and that have been configured to join together in a cluster.
 
 
-What is Docker Swarm used for?
+**What is Docker Swarm used for?**
 Docker swarm is a `container orchestration tool`, meaning that it allows the user to manage multiple containers deployed across multiple host machines.
