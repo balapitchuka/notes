@@ -105,10 +105,13 @@ f18e5aecdd72        busybox             "sh"                13 minutes ago      
 
 ### Docker Network Types
 
-1. Closed Network/None Network(complete isolated from network)
-2. Bridge Network
-3. Host Network
+1. Closed Network/None Network(complete isolated from network, not attached to any network)
+2. Bridge Network (network isolation between docker host and docker container, private internal network where application ports have to mapped to host ports for external access)
+3. Host Network(no network isolation between docker host and docker container)
 4. Overlay Network
+- We can create docker network in a docker host which containers can user for communication
+- To communicate with containers running with different docker host we can use overlay network in docker
+- `Overlay Network` creates internal private network that spans across all the nodes participating in Swarm` cluster
 
 - list all docker networks
 
@@ -130,4 +133,14 @@ f18e5aecdd72        busybox             "sh"                13 minutes ago      
 	docker run -d --net none busybox sleep 1000
 	```
 
+- create overlay network
+	```
+	1.create network that spans across all the nodes participating in swarm cluster
+	docker network create --driver overlay --subnet 10.0.9.0/24 my-overlay-network
 	
+	2.attach containers or services to the above network while creating service
+	docker service create --replicas 2 --network my-overlay-network nginx
+	```
+	
+## Swarm Cluster
+A Docker Swarm is a group of either physical or virtual machines that are running the Docker application and that have been configured to join together in a cluster.
