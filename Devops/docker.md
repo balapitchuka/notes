@@ -148,3 +148,4 @@ A Docker Swarm is a group of either physical or virtual machines that are runnin
 
 **What is Docker Swarm used for?**
 Docker swarm is a `container orchestration tool`, meaning that it allows the user to manage multiple containers deployed across multiple host machines.
+
