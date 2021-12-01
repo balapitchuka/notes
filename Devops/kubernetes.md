@@ -154,6 +154,23 @@ Kubernetes supports different controllers that you can use for replication.  Eac
 - A ReplicaSet can be used to reliably run a single Pod indefinitely or to run multiple instances of the same Pod.
 
 
+**Deployment**
+- A Deployment is a Kubernetes object that acts as a wrapper around a ReplicaSet and makes it easier to use.
+- In order to `manage replicated services`, it's `recommended that` you `use Deployments` that, in turn, manage the ReplicaSet and the Pods created by the ReplicaSet
+- The `major motivation` for using a Deployment is that it `maintains a history of revisions`. Every time a change is made to the ReplicaSet or the underlying Pods, a new revision of the ReplicaSet is recorded by the Deployment.
+
+
+**StatefulSets**
+- StatefulSets are used to manage stateful replicas
+
+
+**DaemonSets**
+- 
+
+**Jobs**
+- A Job is a supervisor in Kubernetes that can be used to `manage Pods` that are supposed to `run a determined task and then terminate gracefully`.
+- The Pods created by a Job aren't deleted following completion of the job. The Pods run to completion and stay in the cluster with a Completed status.
+
 
 
 ## Kubernetes Cluster Setup
