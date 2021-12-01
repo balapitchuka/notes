@@ -136,6 +136,25 @@ kubectl create -f svc/go-demo-2-svc.yml
 kubectl get -f svc/go-demo-2-svc.yml
 ```
 
+### Kubernetes Controllers
+
+What is a controller?
+- A controller is an object that ensures that your application runs in the `desired state` for its `entire runtime`
+
+Kubernetes supports different controllers that you can use for replication.  Each of these controllers is useful for specific use cases`.
+- ReplicaSets
+- Deployments
+- DaemonSets
+- StatefulSets
+- Jobs
+
+**ReplicaSets**
+- A ReplicaSet is a Kubernetes controller that `keeps a certain number of Pods running at any given time`.
+- Even if someone deletes the only running Pod, the ReplicaSet will ensure that a new Pod is created to replace it, thereby ensuring that one Pod is always running.
+- A ReplicaSet can be used to reliably run a single Pod indefinitely or to run multiple instances of the same Pod.
+
+
+
 
 ## Kubernetes Cluster Setup
 
