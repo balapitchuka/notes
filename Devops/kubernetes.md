@@ -66,6 +66,13 @@ The Container Runtime (Docker, rkt, or others)
     - used only in local development environment
     - ```minicube status```
 
+## Namespaces
+A namespace can be in one of two phases:
+- Active the namespace is in use
+- Terminating the namespace is being deleted, and can not be used for new objects
+
+### Namespace 
+
 
 ## Kubernetes Components <a name="KubernetesComponents"></a>
 
