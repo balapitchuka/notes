@@ -231,22 +231,40 @@ Kubernetes supports different controllers that you can use for replication.  Eac
     - avoid creating above steps manually from management console or from command line
     - eksctl create cluster command will create eks cluster with default values
 
-  ##### eksctl commands
-  1. create kubernetes cluster
-  ```
-  eksctl create cluster --name test-cluster --version 1.17 --region ap-south-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes2
-  ```
+## Kubernetes Commands
+1. create kubernetes cluster
+```
+> eksctl create cluster --name test-cluster --version 1.17 --region ap-south-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes2
 
-  check  .kube/config file created by above command
+Provisioning a managed Kubernetes cluster on Amazon EKS
+Create kubernetes as a service cluster on aws eks
+> eksctl create cluster
+> eksctl create cluster --name my-clusteer --version 1.17 --manged --asg-access
 
-  2. check the cluster nodes
-  `kubectl get nodes`
+- By default, eksctl deploys a cluster with workers on two m5.large instances using the AWS EKS AMI in the us-west-2 region. 
+- eksctl creates and exports the Kubernetes configuration under ~/.kube/config. Therefore, no additional steps are required to connect your clusters using kubectl
+```
 
-  3. delete the kubernetes cluster
-  `eksctl delete cluster --name test-cluster`
+check  .kube/config file created by above command
+
+2. check the cluster nodes
+```
+kubectl get nodes
+```
+
+3. delete the kubernetes cluster
+```
+eksctl delete cluster --name test-cluster
+```
 
 
+4. Update kubectl configuration to aws eks cluster
+```
+aws eks --region <region> update-kubeconfig --name <clustername>
+```
+5. Get kubernetes cluster information and workers
+```
+kubectl cluster-info && kubectl get nodes
+```
 
-
-    
     
