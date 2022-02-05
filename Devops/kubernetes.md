@@ -97,6 +97,7 @@ A namespace can be in one of two phases:
 
 ### Services
 Getting Started with Communication
+- Kubernetes service span across worker nodes
 
 #### How services are useful? 
 - Services enable connectivity between groups of pods
@@ -217,6 +218,43 @@ spec:
       protocol: TCP
 
 ```
+
+> kubectl get svc
+
+Usecases for Headless Service
+- Client wants to communicate with 1 specific pod diretly
+- Pods want to talk direclty with specific pod
+- So not randomly selected
+- Use Case: Stateful applications like databases, elasticsearch
+  - In stateful applications like databases pod replicas are not identical
+
+
+How can client know Pods IP addresses?
+- Client needs to figure out IP addresses of each pod
+    - Option 1 - API call to k8s API Server
+        - makes app too tied to k8s api
+        - inefficient
+    - Option 2 - DNS Lookup
+        - DNS lookup for service returns single IP address(Cluster IP)
+
+2. NodePort
+- External traffic has access to fixed port on each worker node
+- Nodeport range is [30000 - 32767]
+- Nodeport services are not secure
+- NodePort service is an extension of ClusterIP service
+- NodePort is not generally using for external connection  to test some service
+  quicly but not for production usecases
+
+
+3. LoadBalancer
+- Service becomes accessible externally through cloud providers LoadBalancer
+- When we create load balancer service, NodePort and ClusterIP service are
+  created automatically by kubernetes, to which external cloud load balances routes traffice to 
+- Loadbalance service is an extension of NodePort service
+
+
+Services wrapup:
+- Configure ingress or loadbalancer for production environments
 
 
 ### Kubernetes Controllers
