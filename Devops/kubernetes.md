@@ -6,6 +6,7 @@ This notes contains a cheatsheet of all kubernetes concepts collected from vario
 1. [Kubernetes Components](#KubernetesComponents)
     - Pods
     - Services
+    - Deployments
     - Controllers
     - ConfigMaps And Secrets
  
@@ -257,6 +258,48 @@ Services wrapup:
 - Configure ingress or loadbalancer for production environments
 
 
+### Kubernetes Deployments
+Verify the status of the Deployment and troubleshoot it if needed
+> kubectl rollout status deployment <deployment_name>
+
+Fetch deployments in current namespace
+> kubectl get deployments
+
+Fetch replicasets and pods in the namespace
+> kubectl get rs,pods
+
+Check the details and events for the Deployment and note recent ScalingReplicaSet events
+> kubectl describe deployments
+
+
+Get the rollout history of the deployment
+> kubectl rollout history deployment <deployment_name>
+```
+REVISION CHANGE-CAUSE
+1        <none>
+2        image updated to 1.16.0
+3        image updated to 1.17.0 and scaled up to 3 replicas
+```
+**Note:**
+- Notice that the rollback command only takes the Deployments back to different image version rollouts, and does not undo the other spec changes, such as the number of replicas.
+
+
+
+Roll back the last rollout
+> kubectl rollout undo deployment <deployment_name>
+
+
+Roll back to a specific revision
+> kubectl rollout undo deployment nginx-deployment --to-revision=1
+
+**Important**
+- Kubernetes schedules resources on the worker nodes based on the availability of resources. If you are using a small cluster with limited CPU and memory resources, you may easily run out of resources, which would cause new Deployments to fail to get scheduled on worker nodes. 
+
+Delete a Deployment:
+> kubectl delete deployment nginx-deployment
+
+
+
 ### Kubernetes Controllers
 
 What is a controller?
@@ -292,6 +335,229 @@ Kubernetes supports different controllers that you can use for replication.  Eac
 - A Job is a supervisor in Kubernetes that can be used to `manage Pods` that are supposed to `run a determined task and then terminate gracefully`.
 - The Pods created by a Job aren't deleted following completion of the job. The Pods run to completion and stay in the cluster with a Completed status.
 
+
+
+### kubernetes Volumes
+How to persist data in kubernetes using volumes
+- Persistent Volumes
+- Persistent Volume Claims
+- Storage Class
+
+
+Our storage requirement is:
+-  We need storage that does not depend on the pod lifecycle
+- Storage must be available on all nodes
+- Storage needs to survive even if cluster crashes
+
+Persistent Volume
+- a clusteer resource just like ram, cpu
+- created using YAML file
+
+
+Persistent volume YAML example
+```
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: efs-pvc
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-2ad6c0fb
+```
+Note:  
+- Persistent volumes are not namespaced
+- PV outside of the namespaces
+- Accessible to the whole cluster
+
+
+Local vs Remote Volume Types
+
+- Each volume type has its own use case
+- Local volumes types violate 2 and 3 requirement for data persistence
+    - Being tied to 1 specific node
+    - Surviving cluster crashes
+
+Who configures storage in kubernetes
+- Storage resource is provisioned by Admin
+eg: nfs-storage or cloud-storage has to be made available to the cluster
+- k8s admin create the persistent volume components from these storage backends
+
+#### Persistent volume claim
+
+Persistent volume claim example
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-storage-claim
+  namespace: storage
+spec:
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  storageClassName: efs-sc
+  resources:
+    requests:
+      storage: 5Gi
+
+```
+
+
+Create a pod using the pvc in above step
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+        - mounthPath: "/var/www/html"
+          name: mypd
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: efs-storage-claim
+        
+```
+
+Levels of Volume abstractions
+- Pod request the volume through the PV claim
+- Claim tries to find a volume in cluster
+- Volume has the actual storage backend
+
+Note: Claims must be in the same namespace as pod
+
+Who creates storage 
+- Admin provisions storage resource(PV)
+- users/developers create claim to PV(pvc)
+
+
+#### Storage Class
+Why Storage Class
+- Another abstraction level
+- abstracts underlying storage provider
+- parameters for that storage
+
+- SC provisions persistent volumes dynamically when persistentVolumeClaim claims it
+
+- StorageBackend is definede  in the SC component
+- via "provisioner" attribute
+- each storage backend has own provisioner
+- internal provisioner - "kubernetes.io"
+- external provisioner
+- configure parameters for storage we want to request for PV
+
+StorageClass YAML Definition
+```
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: storage-class-name
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: io1
+  iopsPerGB: "10"
+  fsType: ext4
+```
+
+Storage drivers
+
+- kubernetes cluster does not have any additional storage drivers installed
+- list storage drivers in cluster
+    - > kubectl get csidrivers
+
+
+### Kubernetes ConfigMap and Secret
+- Both are local volumes
+- not created via PV and PVC
+- managed by Kubernetes
+
+Eg:
+- Configuration file for your pod
+- Certificate file for your pod
+
+
+Steps:
+1. Create ConfigMap and/or Secret component
+2. Mount that into your pod/container
+
+
+
+### Kubernetes Networking
+
+Kubernetes is all about networking. There are threee types of networks in kubernetes:
+
+1. Node
+2. Cluster
+3. Pod
+
+### Roles in Kubernetes
+Roles in kubernetes
+
+- k8s Administrator setups and maintains the cluster and also make sure cluster  has enough resources
+- k8s user who deploys the applications in the cluster
+
+
+====================================================
+
+### Kuberntes Ingress
+Ingress Controller
+- The function of ingress controller is to evaluate all the rules that you have defined in your cluster
+- way to manage all the redirections
+- This will be the entrypoint to cluster
+- Inorder to install this implementation of ingress in your cluster you have to 
+decide which one of the many different third party implementations you want to choose from
+- There is one ingress controller from kubernetes itself which is Kubernetes
+  Nginx Ingress Controller
+
+
+Install Ingress Controller in Minikube
+
+> minikube addons enable ingress
+This command automatically starts K8s Nginx Implementation of Ingress Controller
+
+Check ingres controller (it is present as pod)
+> kubectl get pod -n kube-system
+
+Configure ingress for kubernetes dashboard
+
+- Reference:
+    - https://www.youtube.com/watch?v=80Ew_fsV4rM&ab_channel=TechWorldwithNana
+
+> kubectl get all -n kubernetes-dashboard
+
+```
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: dashboard-ingress
+  namespace: kubernetes-dashboard
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+  labels:
+    app: airflow-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: kubernetes-dashboard
+              servicePort: 80
+
+```
 
 
 ## Kubernetes Cluster Setup
