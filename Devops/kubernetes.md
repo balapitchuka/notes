@@ -98,6 +98,15 @@ A namespace can be in one of two phases:
 ### Services
 Getting Started with Communication
 
+#### How services are useful? 
+- Services enable connectivity between groups of pods
+  - example:
+        - services enables the frontend application to be made availabel to end users
+        - It helps communication between backend and frontend pods
+        - Also helps communication between backend and external datasource
+
+
+
 + Since Pods are unreliable, short-lived, and volatile, we cannot assume that the database would always be accessible through the IP of a Pod. 
 + When that Pod gets destroyed (or fails), the ReplicaSet would create a new one and assign it a new address.
 + We need a stable, never-to-be-changed address that will forward requests to whichever Pod is currently running.
@@ -151,6 +160,64 @@ spec:
 kubectl create -f svc/go-demo-2-svc.yml
 kubectl get -f svc/go-demo-2-svc.yml
 ```
+
+### Kubernetes Endpoints
+- When we create a service, kubernetes create Endpoint object
+    - > kubectl get endpoints
+- Endpoints have same name as Service
+- Endpoints keeps track of, which pods are the members/endpoints of the service
+
+Service Template
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: <service_name>
+  namespace: <k8s_namespace>
+spec:
+  type: NodePort
+  selector:
+    component: webserver
+    release: airflow
+  ports:
+    - name: mongodb
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+    - name: mongodb-exporter
+      port: 27012
+      targetPort: 2345
+      nodePort: 30000
+      protocol:  TCP
+```
+
+### Types of kubernetes services
+1. ClusterIP
+- Default, type not needed in definition file
+- Internal service 
+- ClusteerIP only accessible within cluster
+- Headless Service
+
+Headless service definition file template
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: <service_name>
+  namespace: <k8s_namespace>
+spec:
+  clusteerIP: None
+  selector:
+    component: webserver
+    release: airflow
+  ports:
+    - name: mongodb
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+
+```
+
 
 ### Kubernetes Controllers
 
