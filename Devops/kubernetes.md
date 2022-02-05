@@ -3,14 +3,15 @@ This notes contains a cheatsheet of all kubernetes concepts collected from vario
 
 ## Table of Contents
 1. [References](#References)
-2. [Kubernetes Components](#KubernetesComponents)
+1. [Kubernetes Components](#KubernetesComponents)
     - Pods
     - Services
     - Controllers
     - ConfigMaps And Secrets
-    
-4. [Learning Resources](#Learning)
-5. [Additional Examples](#AddEx)
+ 
+1. [Kubernetes Networking](#kube_networking)    
+1. [Learning Resources](#Learning)
+1. [Additional Examples](#AddEx)
 
 
 
