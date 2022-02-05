@@ -26,6 +26,14 @@ This notes contains a cheatsheet of all kubernetes concepts collected from vario
 - AWS EKS workshop 
   - https://www.eksworkshop.com/010_introduction/basics/concepts_nodes/
 
+## Tools Installation
+- AWS Shell:
+    - It is an integrated shell that works with the AWS CLI. It uses the AWS CLI configuration and improves productivity with an autocomplete feature.
+    - Install aws shell:
+        - `sudo apt-get install aws-shell && aws-shell`
+        -  You can use AWS commands with aws-shell with less typing. Press the F10 key to exit the shell
+
+
 ## Kubernetes nodes
 + The machines that make up a Kubernetes cluster are called nodes.
 + Nodes in a Kubernetes cluster may be physical, or virtual.
