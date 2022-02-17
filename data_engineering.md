@@ -58,3 +58,31 @@ References
 
 10. JVM language
 Knowledge of a JVM based language such as Java or Scala will be extremely useful, since most open source data processing tools are written using JVM languages. e.g Apache Spark, Apache Flink, etc
+
+
+
+## Change Data Capture (CDC)
++ Process of observing all data changes written to a database and extracting them in a form in which they can be replicated to derived data systems.
+
+The CDC process has three stages.
++ Change detection
++ Change capture
++ Change propagation
+
+### Change detection methods
+There are few options to detect the changes done to the source database.
++ Polling the `LAST_UPDATED` column of tables periodically to detect changes.
+  + Polling is slow; it puts more load on the source database
+  + Also, the implementation requires you to add dedicated columns to the source
++ Database triggers to capture row-level operations.
+  + Triggers deliver the results in real-time. But they are resource-intensive and can drag the database.
++ Watch the database transaction log for changes.
+  + Watching the transaction log of the database is fast and does not impose a performance impact. 
+  + Many CDC systems today have adopted this approach for their implementations.
+
+### Requirements for a production-grade CDC system
+A production-grade CDC system should satisfy the following needs.
++ Message ordering guarantee — The order of changes MUST BE preserved so that they are propagated to the target systems as is.
++ Pub/sub — Should support asynchronous, pub/sub style change propagation to consumers.
++ Reliable and resilient delivery — At-leat-once delivery of changes. Cannot tolerate a message loss.
++ Message transformation support — Should support light-weight message transformations as the event payload need to match with the target system’s input format.
