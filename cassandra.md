@@ -16,3 +16,7 @@
   - Storage Engine
   - Guarantees
   - Snitch
+
+
+Overview
+- Apache Cassandra is a free and open source distributed wide column store NoSQL database management system designed to handle large amount of data across multiple commodity servers providing high availability with no single point of failure
