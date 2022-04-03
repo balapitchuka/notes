@@ -1,8 +1,33 @@
 # Kubernetes Notes
-This notes contains a cheatsheet of all kubernetes concepts collected from various resources
+This notes contains kubernetes concepts collected from various resources
 
 ## Table of Contents
-1. [References](#References)
+- [References](#References)
+- [Overview](#overview)
+  * [What is Kubernetes?](#what_kubernetes)
+  * [Kubernetes Components](#kubernetes_components)
+  * Kubernetes API
+  * Working with Kubernetes Objects
+- [Cluster Architecture](#cluster_architecture)
+  * Nodes
+  * Control Plane-Node Communication
+  * Controllers
+  * Cloud Controller Manager
+  * Container Runtime Interface(CRI)
+  * Garbage Collection
+- Containers
+- Workloads
+  * Pods
+  * Workload Resources
+- Services, Load Balancing and Networking
+- Storage
+- Configuration
+- Security
+- Policies
+- Scheduling, Preemption and Eviction
+- Cluster Administration
+- Extending Kubernetes
+
 1. [Kubernetes Components](#KubernetesComponents)
     - Pods
     - Services
@@ -15,17 +40,10 @@ This notes contains a cheatsheet of all kubernetes concepts collected from vario
 1. [Additional Examples](#AddEx)
 
 
-
-
-- Open source container orchestration tool
-- Developed by Google
-- Helps you manage containerized applications in different deployment environments like physical, virtual machines or cloud environments.
-
-
-
 ## References <a name="References"></a>
 - AWS EKS workshop 
   - https://www.eksworkshop.com/010_introduction/basics/concepts_nodes/
+
 
 ## Tools Installation
 - AWS Shell:
@@ -34,6 +52,21 @@ This notes contains a cheatsheet of all kubernetes concepts collected from vario
         - `sudo apt-get install aws-shell && aws-shell`
         -  You can use AWS commands with aws-shell with less typing. Press the F10 key to exit the shell
 
+## Overview <a name="overview"></a>
+
+### What is Kubernetes? <a name="what_kubernetes"></a>
+- Open source container orchestration tool
+- Developed by Google
+- Helps you manage containerized applications in different deployment environments like physical, virtual machines or cloud environments.
+
+### Kubernetes Components <a name="kubernetes_components"></a>
+
+|                   Kubernetes Components         |
+| :---------------------------------------------: |
+| ![mean_stack](static/kubernetes/kubernetes_cluster_components.png) |
+
+
+## Cluster Architecture <a name="cluster_architecture"></a>
 
 ## Kubernetes nodes
 + The machines that make up a Kubernetes cluster are called nodes.
@@ -84,11 +117,7 @@ A namespace can be in one of two phases:
 ### Namespace 
 
 
-## Kubernetes Components <a name="KubernetesComponents"></a>
 
-|                   Kubernetes Components         |
-| :---------------------------------------------: |
-| ![mean_stack](static/kubernetes/kubernetes_cluster_components.png) |
 
 ### Pods
 - Smallest units of k8s
@@ -337,41 +366,119 @@ Kubernetes supports different controllers that you can use for replication.  Eac
 
 
 
-### kubernetes Volumes
-How to persist data in kubernetes using volumes
+
+
+
+
+
+
+
+### Roles in Kubernetes
+Roles in kubernetes
+
+- k8s Administrator setups and maintains the cluster and also make sure cluster  has enough resources
+- k8s user who deploys the applications in the cluster
+
+
+====================================================
+
+### Kuberntes Ingress
+Ingress Controller
+- The function of ingress controller is to evaluate all the rules that you have defined in your cluster
+- way to manage all the redirections
+- This will be the entrypoint to cluster
+- Inorder to install this implementation of ingress in your cluster you have to 
+decide which one of the many different third party implementations you want to choose from
+- There is one ingress controller from kubernetes itself which is Kubernetes
+  Nginx Ingress Controller
+
+
+Install Ingress Controller in Minikube
+
+> minikube addons enable ingress
+This command automatically starts K8s Nginx Implementation of Ingress Controller
+
+Check ingres controller (it is present as pod)
+> kubectl get pod -n kube-system
+
+Configure ingress for kubernetes dashboard
+
+- Reference:
+    - https://www.youtube.com/watch?v=80Ew_fsV4rM&ab_channel=TechWorldwithNana
+
+> kubectl get all -n kubernetes-dashboard
+
+```
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: dashboard-ingress
+  namespace: kubernetes-dashboard
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+  labels:
+    app: airflow-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: kubernetes-dashboard
+              servicePort: 80
+
+```
+
+
+## Services, Load Balancing and Networking
+
+### Kubernetes Networking
+
+Kubernetes is all about networking. There are threee types of networks in kubernetes:
+
+1. Node
+2. Cluster
+3. Pod
+
+## Storage
+
+### Kubernetes Volumes
+**How to persist data in kubernetes using volumes**
 - Persistent Volumes
 - Persistent Volume Claims
 - Storage Class
 
 
-Our storage requirement is:
+**Our storage requirement is:**
 -  We need storage that does not depend on the pod lifecycle
 - Storage must be available on all nodes
 - Storage needs to survive even if cluster crashes
 
-Persistent Volume
-- a clusteer resource just like ram, cpu
+**Persistent Volume**
+- a cluster resource just like ram, cpu
 - created using YAML file
 
 
-Persistent volume YAML example
-```
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: efs-pvc
-spec:
-  capacity:
-    storage: 10Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: efs-sc
-  csi:
-    driver: efs.csi.aws.com
-    volumeHandle: fs-2ad6c0fb
-```
+**Persistent volume YAML example**
+  ```
+  apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: efs-pvc
+  spec:
+    capacity:
+      storage: 10Gi
+    volumeMode: Filesystem
+    accessModes:
+      - ReadWriteMany
+    persistentVolumeReclaimPolicy: Retain
+    storageClassName: efs-sc
+    csi:
+      driver: efs.csi.aws.com
+      volumeHandle: fs-2ad6c0fb
+  ```
+
 Note:  
 - Persistent volumes are not namespaced
 - PV outside of the namespaces
@@ -390,9 +497,9 @@ Who configures storage in kubernetes
 eg: nfs-storage or cloud-storage has to be made available to the cluster
 - k8s admin create the persistent volume components from these storage backends
 
-#### Persistent volume claim
+#### Persistent Volume Claim
 
-Persistent volume claim example
+**Persistent volume claim example**
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -478,6 +585,8 @@ Storage drivers
     - > kubectl get csidrivers
 
 
+## Configuration
+
 ### Kubernetes ConfigMap and Secret
 - Both are local volumes
 - not created via PV and PVC
@@ -493,78 +602,15 @@ Steps:
 2. Mount that into your pod/container
 
 
+## Security
 
-### Kubernetes Networking
-
-Kubernetes is all about networking. There are threee types of networks in kubernetes:
-
-1. Node
-2. Cluster
-3. Pod
-
-### Roles in Kubernetes
-Roles in kubernetes
-
-- k8s Administrator setups and maintains the cluster and also make sure cluster  has enough resources
-- k8s user who deploys the applications in the cluster
-
-
-====================================================
-
-### Kuberntes Ingress
-Ingress Controller
-- The function of ingress controller is to evaluate all the rules that you have defined in your cluster
-- way to manage all the redirections
-- This will be the entrypoint to cluster
-- Inorder to install this implementation of ingress in your cluster you have to 
-decide which one of the many different third party implementations you want to choose from
-- There is one ingress controller from kubernetes itself which is Kubernetes
-  Nginx Ingress Controller
-
-
-Install Ingress Controller in Minikube
-
-> minikube addons enable ingress
-This command automatically starts K8s Nginx Implementation of Ingress Controller
-
-Check ingres controller (it is present as pod)
-> kubectl get pod -n kube-system
-
-Configure ingress for kubernetes dashboard
-
-- Reference:
-    - https://www.youtube.com/watch?v=80Ew_fsV4rM&ab_channel=TechWorldwithNana
-
-> kubectl get all -n kubernetes-dashboard
-
-```
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: dashboard-ingress
-  namespace: kubernetes-dashboard
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
-  labels:
-    app: airflow-ingress
-spec:
-  rules:
-    - http:
-        paths:
-          - path: /*
-            backend:
-              serviceName: kubernetes-dashboard
-              servicePort: 80
-
-```
-
+## 
 
 ## Kubernetes Cluster Setup
 
 ### Locally 
 
-1.a configure a self-managed Kubernetes cluster
+- a configure a self-managed Kubernetes cluster
   - [Minikube](https://kubernetes.io/docs/tasks/tools/) – Development and Learning
   - [Kops](https://github.com/kubernetes/kops) – Learning, Development, Production
   - [Kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) – Learning, Development, Production
