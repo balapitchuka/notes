@@ -47,6 +47,11 @@ Control – You can change the status (frozen, stopped, or restarted) of all pro
 | :---------------------------------------------: |
 | ![mean_stack](static/docker/docker_vs_vm.png)   |
 
+
+**Notes:**
+What is the difference between Virtual Machines (VM) and Containers?
+- Differences between Virtual Machines and Containers is that a `VM virtualizes the hardware` and a `Container “virtualizes” the OS`
+
 ### Docker Terminology
 - Docker Image
   - Image = File System Snapshot + default run command
