@@ -100,4 +100,6 @@ Partition Key
     - Same type in all items
 - Each item should have a unique value of the partition key attribute
 - Partition Key allows to get a single item
-- 
+
+Item Size Limit
+- Item should be smaller than 400KB
