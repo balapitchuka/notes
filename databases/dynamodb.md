@@ -103,3 +103,25 @@ Partition Key
 
 Item Size Limit
 - Item should be smaller than 400KB
+
+## Scaling In Dynamodb
+Scaling is a process of changing a capacity of a cloud resource depending on a demand for this resource
+Two ways to scale
+- Provisioned capacity
+    - Specify expected read/write throughput
+- On-demand capacity
+    - Database scales according to the demand
+
+### Provisioned Capacity
+- Directly specify how much throughput you need
+- Define capacity per table(amount of RCUs and WCUs)
+- Can change at any time
+- Price depends on provisioned capacity
+
+### Capacity Units
+- Each table has RCU/WCU values
+- 1 RCU
+    - Read up to 4KB per second
+- 1 WCU
+    - Write up to 1KB per second
+ 
