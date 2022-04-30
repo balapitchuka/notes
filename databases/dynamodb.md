@@ -152,3 +152,10 @@ Allows temporary to go over the limit
     - Decreass if the load goes down
  - Can be configured or disabled
  
+ ### Key Types in DynamoDB
+ - Simple Key
+    - Partition Key 
+        - Fetch a single item
+ - Composite Key
+    - Partition and sork key
+        - Fetch multiple items from table very efficiently
