@@ -68,7 +68,7 @@
 - Tables have no schema
 - No databases(collection of tables)
 
-Items in Dyanmodb
+Item in Dyanmodb
 ```json
 { 
   "Id" : "1234",
@@ -76,3 +76,28 @@ Items in Dyanmodb
   "Title" : "Mr"
 }
 ```
+
+Datatypes
+- Dynamodb supports a number of scalar types
+- Scalar type means an attribute contains just a single value
+- Attribute can be
+    - String
+    - Number
+    - Binary(up to 400KB)
+    - Boolean
+    - Null
+- Attribute in Dyanmodb can also contain multiple values
+    - "List" : [1, "Car", true]
+- List(any type)
+- Set of Strings(unique values)
+- Set of Binaries(unique values)
+- Set of Numbers(unique values)
+- Maps
+
+Partition Key
+- Every table should have a partition key attribute
+    - Every item should have it
+    - Same type in all items
+- Each item should have a unique value of the partition key attribute
+- Partition Key allows to get a single item
+- 
