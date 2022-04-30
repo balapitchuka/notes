@@ -7,6 +7,15 @@
 - Columnar databases
 - Graph databases
 
+## CAP Theorem
+- Consistency
+    - Receive the latest data on every read
+- Availability
+    - Every requests receives a non-error reply
+- Partition tolerance
+    - System works despite some packets dropped
+  
+
 ### Big Data Characteristics
 - High Volume
 - High Variety
