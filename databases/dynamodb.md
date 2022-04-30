@@ -125,3 +125,30 @@ Two ways to scale
 - 1 WCU
     - Write up to 1KB per second
  
+### What if we have less capacity
+When capacity is used up
+- Dyanmodb will return an error
+    - Throttling
+- Can retry a request
+- Can increase number of RCU/WCU
+Allows temporary to go over the limit
+- Burst capacity
+- Finite amount
+- Takes time to recover
+
+### Dyamodb Cost
+1 RCU
+    - Costs $0.00065 per hour
+    - Costs $0.5 per month
+1 WCU
+    - Costs $0.00013 per hour
+    
+10 RCU/10 WCU
+- Cost $6 per month
+
+### Autoscaling with Dynamodb
+- AWS can automatically change capacity
+    - Increase if the load goes up
+    - Decreass if the load goes down
+ - Can be configured or disabled
+ 
