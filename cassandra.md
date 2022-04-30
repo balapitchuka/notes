@@ -52,3 +52,7 @@ Partitioning (How Apache Cassandra distributes data in the cluster)
   - Consistent Hashing works on the principle of Tokens and Rings
 
 
+Ring & Token
+
+
+
