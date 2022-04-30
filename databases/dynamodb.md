@@ -16,12 +16,12 @@
     - System works despite some packets dropped
   
 
-### Big Data Characteristics
+## Big Data Characteristics
 - High Volume
 - High Variety
 - High Velocity
 
-####Dynamodb is
+## Dynamodb is
 - Serverless(no need to maintain server or infrastructure as dynamodb is a fully managed service)
 - Cloud(is available only as a service from aws cloud)
 - NoSQL
@@ -32,11 +32,11 @@
 - Fault Tolerant
 - Secure
 
-### SQL DB vs DynamoDB
+## SQL DB vs DynamoDB
 ![sql_vs_dynamodb](static/sql-vs-dynamodb.png)
 
 
-### Dynamodb basics
+## Dynamodb Basics
 - Dynamodb has no concept of having multiple databases
 - Tables are the top level entities in dynamodb
 - All tables at a given aws region can be looked as a single database
@@ -59,3 +59,20 @@
 - `aws configure'
 - aws dynamodb list-tables
 
+## Dynamodb Introduction
+- Data is stored in tables
+    - table is collection of items
+    - an item consists of attributes
+        - name
+        - value
+- Tables have no schema
+- No databases(collection of tables)
+
+Items in Dyanmodb
+```json
+{ 
+  "Id" : "1234",
+  "Name" : "john",
+  "Title" : "Mr"
+}
+```
