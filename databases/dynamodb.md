@@ -1,5 +1,12 @@
 # AWS Dynamodb
 + [Amazon Dynamo Paper](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
+
+## NOSQL Databases
+- Key-value databases
+- Document databases
+- Columnar databases
+- Graph databases
+
 ### Big Data Characteristics
 - High Volume
 - High Variety
@@ -37,3 +44,9 @@
         - Also we can provision whatever required capacity for the table
     - No strict schema for tables as we see in sql databases
     - Only mandatory common attribute in dynamodb table is primary key
+
+## Accessing Dynamodb
+- Create IAM user with access to Dynamodb
+- `aws configure'
+- aws dynamodb list-tables
+
