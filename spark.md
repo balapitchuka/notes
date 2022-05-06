@@ -20,3 +20,4 @@ Examples:
 - Pig
 - Hive
 - Spark
+  - Started as an effort to simplify and improve the Map Reduce Framework
