@@ -42,3 +42,7 @@ Spark Storage Manger
 - Azure Blob
 - GCS
 - CFS
+
+Data crunching refers to key initial steps required to prepare large volumes of raw data for analysis
+
+
