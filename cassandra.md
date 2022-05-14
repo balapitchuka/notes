@@ -56,3 +56,12 @@ Ring & Token
 
 
 
+## Why Writes in Cassandra Are So Fast?
+- Cassandra is a distributed database that support incredible write throughout and is known for its scalability and availability. It’s great at supporting applications with very high write throughput.
+- To achieve this high performance, Cassandra has a unique write pattern. Cassandra has a few different data structures that it uses
+  - Commit Log (Disk)
+  - Memtable (Memory)
+  - SSTable (Disk)
+- All three of these data structures are involved in every write process.
+
+
