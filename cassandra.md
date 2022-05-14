@@ -60,8 +60,17 @@ Ring & Token
 - Cassandra is a distributed database that support incredible write throughout and is known for its scalability and availability. It’s great at supporting applications with very high write throughput.
 - To achieve this high performance, Cassandra has a unique write pattern. Cassandra has a few different data structures that it uses
   - Commit Log (Disk)
+    - The first thing Cassandra does when a write comes in is write it to its commit log. The commit log is an append only log of records for durability purposes. If a node goes down during a write or data is damaged, Cassandra can use its commit log to replay all the events and reconstruct the database.
   - Memtable (Memory)
+    - Cassandra maintains an in-memory data structure called Memtable. After writing to the commit log, Cassandra will write your data in its Memtable which resides in memory. Once the data is written to the memtable, the node acknowledges the write as successful.
+    - Cassandra is able to recover in those cases because of its commit log and write redundancy. The commit log lets Cassandra recover lost data in case the Memtable is wiped out. The write is also replicated to multiple other nodes, so if one node loses its Memtable data, there are mechanisms in place for eventual consistency.
+    - Memtable is used as a temporary buffer by Cassandra. Periodically, Cassandra flushes its content from Memtable to its disk data structure called SSTable. Let’s look at that now.
   - SSTable (Disk)
+    - Cassandra contains multiple SSTables in disk where data is actually persisted.
+    - There are two ways Cassandra can decide when to flush its Memtable content to disk:
+    - Periodically. It will write its content to disk after a fixed period of time passes.
+      Memtable size. It will flush the memtable every time the memtable reaches a fixed size, let’s say 4 MB.
+    - Once data is written in the SSTables, the Memtables are wiped clean, ready for more incoming data.
 - All three of these data structures are involved in every write process.
 
 
