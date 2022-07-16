@@ -1,9 +1,9 @@
-References
+## References
 - [DataEngineering Tutorials](https://www.startdataengineering.com/)
 
 
 
-#### 10 Key skills, to help you become a data engineer
+## 10 Key skills, to help you become a data engineer
 
 1. Linux
 - Most applications are built on linux systems so it is crucial to understand how to work with them. The key concepts to know are
@@ -86,3 +86,6 @@ A production-grade CDC system should satisfy the following needs.
 + Pub/sub — Should support asynchronous, pub/sub style change propagation to consumers.
 + Reliable and resilient delivery — At-leat-once delivery of changes. Cannot tolerate a message loss.
 + Message transformation support — Should support light-weight message transformations as the event payload need to match with the target system’s input format.
+
+## What Is Lambda Architecture?
+The Lambda Architecture is a deployment model for data processing that organizations use to combine a traditional batch pipeline with a fast real-time stream pipeline for data access.
